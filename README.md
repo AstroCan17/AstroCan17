@@ -239,7 +239,7 @@
       * Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
   
          $$
-         NUC_{frame} = img \cdot gain + offset - dark_{offset}
+         NUC_{frame} = {img \cdot gain} + {offset - dark_{offset}}
          $$
          
       * Store the gain and offset data in Calibration Key Data (CKD) container. 

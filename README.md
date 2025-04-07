@@ -241,6 +241,7 @@
          $$
          NUC_{frame} = img \cdot gain + offset - dark_{offset}
          $$
+         
       * Store the gain and offset data in Calibration Key Data (CKD) container. 
 
    * #### Bad Pixel Correction

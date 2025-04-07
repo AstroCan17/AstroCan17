@@ -1,4 +1,57 @@
-# Work Summary
+# Table of Contents
+
+**- [Table of Contents](#table-of-contents)
+- [Personal Career Note](#personal-career-note)
+- [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
+  - [1. Introduction](#1-introduction)
+  - [2. Calibration Objectives](#2-calibration-objectives)
+    - [Spectral Calibration](#spectral-calibration)
+    - [Radiometric Calibration](#radiometric-calibration)
+    - [Geometric (Spatial) Calibration](#geometric-spatial-calibration)
+  - [3. Methodology and Calibration Steps](#3-methodology-and-calibration-steps)
+    - [Pre-Calibration Alignment](#pre-calibration-alignment)
+      - [Mechanical Alignment](#mechanical-alignment)
+      - [Dark Signal and Offset](#dark-signal-and-offset)
+    - [Spectral Calibration](#spectral-calibration-1)
+      - [Wavelength Registration](#wavelength-registration)
+      - [Smile and Keystone](#smile-and-keystone)
+      - [Stability Tests](#stability-tests)
+    - [Radiometric Calibration](#radiometric-calibration-1)
+      - [Absolute Radiance Calibration](#absolute-radiance-calibration)
+      - [Linearity and Noise](#linearity-and-noise)
+      - [Stray Light Assessment](#stray-light-assessment)
+    - [Geometric Calibration](#geometric-calibration)
+      - [PSF Mapping](#psf-mapping)
+      - [Field-of-View Verification](#field-of-view-verification)
+      - [Smile and Keystone Validation](#smile-and-keystone-validation)
+  - [4. Data Analysis and Correction](#4-data-analysis-and-correction)
+    - [Key Data Products](#key-data-products)
+    - [Uncertainty Estimation](#uncertainty-estimation)
+    - [Validation](#validation)
+- [Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)](#pushbroom-multispectral-high-resolution-camera-calibration-and-pre-processing-l0-l2)
+  - [Overview](#overview)
+    - [Level 0 Data](#level-0-data)
+    - [Level 1 Radiometric Corrections](#level-1-radiometric-corrections)
+    - [Band Co-registration](#band-co-registration)
+    - [Georeferencing](#georeferencing)
+    - [Level 2 Processing](#level-2-processing)
+    - [Additional Features](#additional-features)
+  - [Requirements and Development Framework](#requirements-and-development-framework)
+  - [Project Structure](#project-structure)
+  - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
+    - [Non Uniformity Correction (NUC)](#non-uniformity-correction-nuc)
+    - [Bad Pixel Correction](#bad-pixel-correction)
+    - [Denoising](#denoising)
+    - [Image Restoration](#image-restoration)
+      - [MTF Calculation and PSF Sharpening](#mtf-calculation-and-psf-sharpening)
+    - [Band Registration](#band-registration)
+    - [Georeferencing](#georeferencing-1)
+    - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
+    - [Atmospheric Correction](#atmospheric-correction)
+
+
+---
+# Personal Career Note
 
    * <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
 <br><br>
@@ -105,30 +158,34 @@
 
          This project implements an image preprocessing pipeline for multispectral satellite imagery, with features including:
 <br><br>
-         - Level 0 data: 
+         - ### Level 0 corrections including: 
            - decoding
            - missing package check, flag generation
-         - Level 1 radiometric corrections including:
-            - Non-uniformity correction (NUC) using key data (gain,offset)
-            - Dark current correction
-            - Denoising using various filters or designing digital signal filters
-            - Radiometric Conversion using key data from lab or on-orbit calibration campaigns.
-            - MTF Compensation / PSF deconvolution
-         - Band co-registration
-           - Sensor image acquisition model or key point extraction and matching
-         - Georeferencing
-           - Using GDAL or rasterio
-           - If possible, using central pixel coordinate from Metadata file to georeference image.
-           - If GNSS data is missing, downloading sentinel-2 images using TLE of the satellite and google earth engine. Thereafter, image-to-image georeferencing applied by keypoint extraction and matching. 
-           - Calculation geolocation accuracy, CE95
+         - ### Level 1 corrections including:
+            - #### Non-uniformity correction (NUC):
+              - Using key data (gain,offset)
+            - #### Dark current correction
+            - #### Denoising:
+              - Using various filters or designing digital signal filters
+            - #### Radiometric Conversion:
+              - using key data from lab or on-orbit calibration campaigns.
+            - #### MTF Compensation / PSF deconvolution
+            - #### Band co-registration
+               - Sensor image acquisition model or key point extraction and matching
+            - #### Georeferencing
+               - Using GDAL or rasterio
+               - If possible, using central pixel coordinate from Metadata file to georeference image.
+               - If GNSS data is missing, downloading sentinel-2 images using TLE of the satellite and google earth engine. Thereafter, image-to-image georeferencing applied by keypoint extraction and matching. 
+            - #### Calculation geolocation accuracy, CE95
 
-         - Orthorectification
-         - Level 2:
-           - Atmospheric correction using Py6S
-         - Additionally:
-           - Pansharpening
+            - #### Orthorectification
+         - ### Level 2:
+           - #### Atmospheric correction:
+             - using Py6S
+         - ### Additionally:
+           - #### Pansharpening
              - Implemented various algorithms, including Simple Brovey, Gram-Schmidt, ESRI, and Brovey.
-           -  Image quality Report Generation: 
+           -  #### Image quality Report Generation: 
               -  To evaluate the quality of raw images and the effectiveness of the applied correction methods, metrics such as Peak Signal-to-Noise Ratio (PSNR), RMSE, SSIM, MSE, GIQE, CE95, radiometric accuracy are calculated and reported in PDF file.
 <br><br>
 
@@ -210,7 +267,7 @@
          4. Calculate the homography matrix.
          5. Warp the bands relative to the reference band using the homography matrix.
 
-   * #### Georeferencing
+   * #### Georeferencing 
       * Use Sentinel-2 bands as a reference for image-to-image georeferencing.
       * Estimate coordinates of the image scene using TLE information.
       * Download Sentinel-2 images from Google Earth Engine for those coordinates.

@@ -1,4 +1,5 @@
-# Want to take a look at what I've been up to so far?
+# Want to take a look at what I've been up to so far? Scroll down and see the tears, blood and sweat :D 
+
 # Table of Contents
 
 **- [Table of Contents](#table-of-contents)
@@ -225,15 +226,15 @@
 
    * #### Non Uniformity Correction (NUC)
       * Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
-      * Calculate gain and offset as:<br><br>
+      * Calculate gain and offset as:
          $$
          gain = \frac{\overline{flatfield_{desired}} - \overline{darkfield_{desired}}}{flatfield_{desired} - darkfield_{desired}}
          $$
-         <br><br>
+  
          $$
          offset = \overline{flatfield_{desired}} - gain \cdot flatfield_{desired}
          $$
-         <br><br>
+ 
       * Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
          $$
          NUC_{frame} = img \cdot gain + offset - dark_{offset}

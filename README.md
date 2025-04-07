@@ -1,4 +1,4 @@
-# Want to take a look at what I've been up to so far? Scroll down and see the tears, blood and sweat :D 
+# Would you like to see my blood, sweat, and tears so far? :D Go ahead Houston ...  :) 
 
 # Table of Contents
 
@@ -227,6 +227,7 @@
    * #### Non Uniformity Correction (NUC)
       * Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
       * Calculate gain and offset as:
+  
          $$
          gain = \frac{\overline{flatfield_{desired}} - \overline{darkfield_{desired}}}{flatfield_{desired} - darkfield_{desired}}
          $$
@@ -236,6 +237,7 @@
          $$
  
       * Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
+  
          $$
          NUC_{frame} = img \cdot gain + offset - dark_{offset}
          $$
@@ -278,6 +280,7 @@
 
    * #### Top of Atmospheric (TOA) Conversion
       * The result of NUC is still in Digital Numbers. Convert to radiometric units using radiometric gain/offset for each band. The Sentinel-2 TOA Reflectance equation can be applied:
+  
          $$
          Radiance_{TOA} = (NUC_{frame} - radiance_{offset}) \cdot radiance_{gain}
          $$

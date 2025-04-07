@@ -1,117 +1,124 @@
 # Work Summary
 
-> About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.
+> <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
 >
-> **Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.
+> <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
 
 ---
 
-## Pushbroom Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)
+## Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)
 
 ### 1. Introduction
 
-The purpose of this report is to outline a detailed calibration procedure for the optical hyperspectral spectrometer to be used in spaceborne applications. Following the calibration framework provided in Baumgartner’s thesis and leveraging the advanced facilities at DLR’s Optical Calibration Laboratory, the objective is to ensure spectral, radiometric, and geometric fidelity of the instrument in compliance with the specified requirements. The calibration campaign will address detector-related effects, spectral response, radiometric accuracy, and geometric alignment.
-
+>The purpose of this report is to outline a detailed calibration procedure for the optical hyperspectral spectrometer to be used in spaceborne applications. Following the calibration framework provided in Baumgartner's thesis and leveraging the advanced facilities at DLR's Optical Calibration Laboratory, the objective is to ensure spectral, radiometric, and geometric fidelity of the instrument in compliance with the specified requirements. The calibration campaign will address detector-related effects, spectral response, radiometric accuracy, and geometric alignment.
+---
 ### 2. Calibration Objectives
 
-#### Spectral Calibration
-- Determine the Instrument Spectral Response Function (ISRF) as a function of wavelength and pixel position.
-- Verify ISRF Full Width at Half Maximum (FWHM) meets the target.
-- Validate spectral oversampling and a spectral sampling interval.
-- Characterize and minimize smile and keystone effects to thresholds below acceptable levels.
-- Confirm pixel spectral linearity and ISRF stability under thermal and mechanical perturbations.
+>#### Spectral Calibration
+>>>- Determine the Instrument Spectral Response Function (ISRF) as a function of wavelength and pixel position.
+>>>- Verify ISRF Full Width at Half Maximum (FWHM) meets the target.
+>>>- Validate spectral oversampling and a spectral sampling interval.
+>>>- Characterize and minimize smile and keystone 	effects to thresholds below acceptable levels.
+>>>- Confirm pixel spectral linearity and ISRF stability under thermal and mechanical perturbations.
+>>>- Measure and characterize spectral resolution across the full spectral range.
+>>>- Determine wavelength calibration accuracy and precision.
+>>>- Evaluate spectral sampling interval and spectral resolution stability.
+---
 
-#### Radiometric Calibration
-- Establish a radiometric reference achieving high multiplicative accuracy using multiple radiance levels.
-- Verify overall optical transmission and detector response consistency.
-- Ensure radiometric stability and zero-level offset stability.
-- Validate detector linearity up to the saturation level and stray light contributions.
 
-#### Geometric (Spatial) Calibration
-- Characterize focal length, aperture, slit geometry, and alignment.
-- Confirm spatial sampling distance at specified orbital altitude.
-- Measure and correct spatial smile and keystone effects to below the specified threshold for design.
-
+>#### Radiometric Calibration
+>>>- Establish a radiometric reference achieving high multiplicative accuracy using multiple radiance levels.
+>>>- Verify overall optical transmission and detector response consistency.
+>>>- Ensure radiometric stability and zero-level offset stability.
+>>>- Validate detector linearity up to the saturation level and stray light contributions.
+---
+>#### Geometric (Spatial) Calibration
+>>>- Characterize focal length, aperture, slit geometry, and alignment.
+>>>- Confirm spatial sampling distance at specified orbital altitude.
+>>>- Measure and correct spatial smile and keystone effects to below the specified threshold for design.
+---
 ### 3. Methodology and Calibration Steps
 
-#### Pre-Calibration Alignment
-**Mechanical Alignment**
-- Mount the instrument on a vibration-isolated optical table.
-- Verify alignment of optical components using a collimated reference beam.
-- Record slit orientation and grating alignment.
+>#### Pre-Calibration Alignment
+>>**Mechanical Alignment**
+>>>- Mount the instrument on a vibration-isolated optical table.
+>>>- Verify alignment of optical components using a collimated reference beam.
+>>>- Record slit orientation and grating alignment.
 
-**Dark Signal and Offset**
-- Operate the detector in a dark and thermally controlled environment.
-- Characterize dark current and offset for reserved dark pixels.
+>>**Dark Signal and Offset**
+>>>- Operate the detector in a dark and thermally controlled environment.
+>>>- Characterize dark current and offset for reserved dark pixels.
+---
+>#### Spectral Calibration
+>>**Wavelength Registration**
+>>>- Use a monochromator to supply narrow spectral lines across the spectrometer's bandwidth.
+>>>- Measure ISRF profiles for each pixel and extract FWHM.
 
-#### Spectral Calibration
-**Wavelength Registration**
-- Use a monochromator to supply narrow spectral lines across the spectrometer’s bandwidth.
-- Measure ISRF profiles for each pixel and extract FWHM.
+>>**Smile and Keystone**
+>>>- Shift the illumination spot across the Field of View (FoV) and record spectral and spatial shifts.
 
-**Smile and Keystone**
-- Shift the illumination spot across the Field of View (FoV) and record spectral and spatial shifts.
-
-**Stability Tests**
-- Simulate thermal and mechanical stresses and evaluate ISRF variation.
-
+>>**Stability Tests**
+>>>- Simulate thermal and mechanical stresses and evaluate ISRF variation.
+---
 #### Radiometric Calibration
-**Absolute Radiance Calibration**
-- Illuminate the entrance slit with a calibrated integrating sphere.
-- Derive gain and offset coefficients for each pixel.
+>**Absolute Radiance Calibration**
+>>>- Illuminate the entrance slit with a calibrated integrating sphere.
+>>>- Derive gain and offset coefficients for each pixel.
 
-**Linearity and Noise**
-- Assess signal-to-noise ratio (SNR), dark current, and readout noise.
-- Vary integration time and radiance levels to confirm detector linearity.
+>**Linearity and Noise**
+>>>- Assess signal-to-noise ratio (SNR), dark current, and readout noise.
+>>>- Vary integration time and radiance levels to confirm detector linearity.
 
-**Stray Light Assessment**
-- Simulate high-contrast scenes and evaluate stray light suppression.
+>**Stray Light Assessment**
+>>>- Simulate high-contrast scenes and evaluate stray light suppression.
 
 #### Geometric Calibration
-**PSF Mapping**
-- Use a collimated beam and pinhole mask to map the Point Spread Function (PSF).
+>**PSF Mapping**
+>>>- Use a collimated beam and pinhole mask to map the Point Spread Function (PSF).
 
-**Field-of-View Verification**
-- Measure FoV and ensure alignment with design specifications.
+>**Field-of-View Verification**
+>>>- Measure FoV and ensure alignment with design specifications.
 
-**Smile and Keystone Validation**
-- Introduce distinct spectral lines across the FoV and measure detector output to quantify smile and keystone effects.
+>**Smile and Keystone Validation**
+>>>- Introduce distinct spectral lines across the FoV and measure detector output to quantify smile and keystone effects.
 
 ### 4. Data Analysis and Correction
 
-**Key Data Products**
-- Spectral calibration files (ISRF maps, wavelength alignment).
-- Radiometric calibration files (gain, offset, linearity corrections).
-- Geometric calibration files (distortion maps, smile/keystone corrections).
+>**Key Data Products**
+>>>- Spectral calibration files (ISRF maps, wavelength alignment).
+>>>- Radiometric calibration files (gain, offset, linearity corrections).
+>>>- Geometric calibration files (distortion maps, smile/keystone corrections).
 
-**Uncertainty Estimation**
-- Assess calibration uncertainties based on reference standards and environmental stability.
-- Document potential sources of error, including mechanical shifts and signal noise.
+>**Uncertainty Estimation**
+>>>- Assess calibration uncertainties based on reference standards and environmental stability.
+>>>- Document potential sources of error, including mechanical shifts and signal noise.
 
-**Validation**
-- Apply calibration files to a test dataset and verify compliance with requirements.
+>**Validation**
+>>>- Apply calibration files to a test dataset and verify compliance with requirements.
 
 ---
 
 ## Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)
 
-For my calibration work, you can find my own demo satellite image preprocessing and calibration & validation pipeline in my Google Drive Folder. This is a demo calibration and preprocessing pipeline starting from **Level-0 (raw)** to **Level-2 (science ready dataset)**. I did not include decoding code and some pansharpening methods due to NDA. Besides, when I have time, I will include the unit tests for the functions, different pansharpening methods, and atmospheric correction algorithms. Also, I am currently working on the MTF sharpening algorithm. If I can complete it in a couple days, I will upload it.  Moreover, I can summarize my work below:
+>For my calibration work, you can find my own demo satellite image preprocessing and calibration & validation pipeline in my Google Drive Folder. This is a demo calibration and preprocessing pipeline starting from **Level-0 (raw)** to **Level-2 (science ready dataset)**. I did not include decoding code and some pansharpening methods due to NDA. Besides, when I have time, I will include the unit tests for the functions, different pansharpening methods, and atmospheric correction algorithms. Also, I am currently working on the MTF sharpening algorithm. If I can complete it in a couple days, I will upload it.  Moreover, I can summarize my work below:
+---
+><span style="color: red"> **Note**:</span>
 
-> **Note**: During my time at Plan-S Satellite and Space Technologies, I contributed to calibration activities for a CubeSat equipped with a multispectral camera. The camera, developed by Dragonfly Aerospace, offers high resolution multispectral imaging capabilities. I also contributed to the design phase of an advanced High Resolution EO satellite constellation project, focusing on optical design and imaging systems. My role involved following the optical component development process and participating in software development for onboard AI processing using NVIDIA Jetson platforms.
 
-### Radiometric, Spatial, and Geometric Calibration
-- I send commands to take pictures of pseudo-invariant sites such as the Mauritania Desert, Dome-C, or Antarctic for the flatfield image at different TDI stages and exposure times. I follow the USGS Test Sites Catalog.
-- I use images taken at night during passes over the Atlantic Ocean, ensuring there are no clouds and no light, as darkfield images.
-
-**Non Uniformity Correction (NUC)**
-1. Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
-2. Calculate gain and offset as:
-
-   ```
+>During my time at Plan-S Satellite and Space Technologies, I contributed to calibration activities for a CubeSat equipped with a multispectral camera. The camera, developed by Dragonfly Aerospace, offers high resolution multispectral imaging capabilities. I also contributed to the design phase of an advanced High Resolution EO satellite constellation project, focusing on optical design and imaging systems. My role involved following the optical component development process and participating in software development for onboard AI processing using NVIDIA Jetson platforms.
+---
+>### Radiometric, Spatial, and Geometric Calibration
+>>>- I send commands to take pictures of pseudo-invariant sites such as the Mauritania Desert, Dome-C, or Antarctic for the flatfield image at different TDI stages and exposure times. I follow the USGS Test Sites Catalog.
+>>>- I use images taken at night during passes over the Atlantic Ocean, ensuring there are no clouds and no light, as darkfield images.
+---
+>>**Non Uniformity Correction (NUC)**
+>>>- Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
+>>>- Calculate gain and offset as:
+```
    gain = (mean(flatfield_desired) - mean(darkfield_desired)) / (flatfield_desired - darkfield_desired)
    offset = mean(flatfield_desired) - gain * flatfield_desired
    ```
-3. Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
+1. Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
 
    ```
    nuc_bpr_frame = img * gain + offset - dark_offset

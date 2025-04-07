@@ -1,4 +1,4 @@
-# Would you like to see my blood, sweat, and tears so far? :D Go ahead Houston ...  :) 
+# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley:
 
 # Table of Contents
 

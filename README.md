@@ -1,8 +1,8 @@
 # Work Summary
 
-> <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
->
-> <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
+   * <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
+
+   * <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### 1. Introduction
 
->The purpose of this report is to outline a detailed calibration procedure for the optical hyperspectral spectrometer to be used in spaceborne applications. Following the calibration framework provided in Baumgartner's thesis and leveraging the advanced facilities at DLR's Optical Calibration Laboratory, the objective is to ensure spectral, radiometric, and geometric fidelity of the instrument in compliance with the specified requirements. The calibration campaign will address detector-related effects, spectral response, radiometric accuracy, and geometric alignment.
+   * The purpose of this report is to outline a detailed calibration procedure for the optical hyperspectral spectrometer to be used in spaceborne applications. Following the calibration framework provided in Baumgartner's thesis and leveraging the advanced facilities at DLR's Optical Calibration Laboratory, the objective is to ensure spectral, radiometric, and geometric fidelity of the instrument in compliance with the specified requirements. The calibration campaign will address detector-related effects, spectral response, radiometric accuracy, and geometric alignment.
 
 ### 2. Calibration Objectives
    * #### Spectral Calibration 

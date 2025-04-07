@@ -1,7 +1,7 @@
 # Work Summary
 
    * <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
-
+<br><br>
    * <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
 
 ---
@@ -95,27 +95,92 @@
 
 ## Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)
 
-   * For my calibration work, you can find my own demo satellite image preprocessing and calibration & validation pipeline in my Google Drive Folder. This is a demo calibration and preprocessing pipeline starting from **Level-0 (raw)** to **Level-2 (science ready dataset)**. I did not include decoding code and some pansharpening methods due to NDA. Besides, when I have time, I will include the unit tests for the functions, different pansharpening methods, and atmospheric correction algorithms. Also, I am currently working on the MTF sharpening algorithm. If I can complete it in a couple days, I will upload it.  Moreover, I can summarize my work below:
+   * Responsible for developing calibration, validation and preprocessing pipeline ground segment software starting from **Level-0 (raw)** to **Level-2 (science ready dataset)**. The pipeline includes the following information and algorithms:
+<br><br>
+     * Multispectral Demo Satellite Preprocessing Pipeline
+<br><br>
+         A demonstration preprocessing pipeline for pushbroom multispectral optical instruments (under development).
 
-   * **Note**: During my time at Plan-S Satellite and Space Technologies, I contributed to calibration activities for a CubeSat equipped with a multispectral camera. The camera, developed by Dragonfly Aerospace, offers high resolution multispectral imaging capabilities. I also contributed to the design phase of an advanced High Resolution EO satellite constellation project, focusing on optical design and imaging systems. My role involved following the optical component development process and participating in software development for onboard AI processing using NVIDIA Jetson platforms.
+         ## Overview
 
-### Radiometric, Spatial, and Geometric Calibration
-   * I send commands to take pictures of pseudo-invariant sites such as the Mauritania Desert, Dome-C, or Antarctic for the flatfield image at different TDI stages and exposure times. I follow the USGS Test Sites Catalog.
+         This project implements an image preprocessing pipeline for multispectral satellite imagery, with features including:
+<br><br>
+         - Level 0 data: 
+           - decoding
+           - missing package check, flag generation
+         - Level 1 radiometric corrections including:
+            - Non-uniformity correction (NUC) using key data (gain,offset)
+            - Dark current correction
+            - Denoising using various filters or designing digital signal filters
+            - Radiometric Conversion using key data from lab or on-orbit calibration campaigns.
+            - MTF Compensation / PSF deconvolution
+         - Band co-registration
+           - Sensor image acquisition model or key point extraction and matching
+         - Georeferencing
+           - Using GDAL or rasterio
+           - If possible, using central pixel coordinate from Metadata file to georeference image.
+           - If GNSS data is missing, downloading sentinel-2 images using TLE of the satellite and google earth engine. Thereafter, image-to-image georeferencing applied by keypoint extraction and matching. 
+           - Calculation geolocation accuracy, CE95
+
+         - Orthorectification
+         - Level 2:
+           - Atmospheric correction using Py6S
+         - Additionally:
+           - Pansharpening
+             - Implemented various algorithms, including Simple Brovey, Gram-Schmidt, ESRI, and Brovey.
+           -  Image quality Report Generation: 
+              -  To evaluate the quality of raw images and the effectiveness of the applied correction methods, metrics such as Peak Signal-to-Noise Ratio (PSNR), RMSE, SSIM, MSE, GIQE, CE95, radiometric accuracy are calculated and reported in PDF file.
+<br><br>
+
+         | Requirements | Testing and Development Framework |
+         |-------------|-----------------------------------|
+         | **Python and Packages:** | **Development Environment:** |
+         | - Python 3.x | - Docker, Kubernetes |
+         | - NumPy | - Dask for distributed computing |
+         | - OpenCV | **Testing:** |
+         | - GDAL | - Pytest for automated testing |
+         | - rasterio | - Unit Testing coverage |
+         | - scikit-image | - Comprehensive logging system |
+         | - matplotlib | |
+         | - Earth Engine API | |
+
+         ## Project Structure
+
+         - `02_scripts`
+            - Core processing scripts
+               - `level_0.py` - Level 0 processing
+               - `level_1.py` - Level 1 processing and corrections  
+               - `band_coreg.py` - Band co-registration
+               - `georeferencing_v1.py` - Georeferencing
+               - `metrics_ips.py` - Quality metrics
+               - `pansharp.py` - Pansharpening
+
+         ## License
+
+         This project is licensed under the GNU GPL v3 - see the `LICENSE` file for details.
+
+<br><br>
+
+### On-Orbit Radiometric, Spatial, and Geometric Calibration
+   * I send commands to capture images of pseudo-invariant sites such as the Mauritania Desert, Dome-C, or Antarctic for the flatfield image at different TDI stages and exposure times. I follow the USGS Test Sites Catalog.
    * I use images taken at night during passes over the Atlantic Ocean, ensuring there are no clouds and no light, as darkfield images.
 
    * #### Non Uniformity Correction (NUC)
       * Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
-      * Calculate gain and offset as:
+      * Calculate gain and offset as:<br><br>
          $$
          gain = \frac{\overline{flatfield_{desired}} - \overline{darkfield_{desired}}}{flatfield_{desired} - darkfield_{desired}}
          $$
+         <br><br>
          $$
          offset = \overline{flatfield_{desired}} - gain \cdot flatfield_{desired}
          $$
+         <br><br>
       * Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
          $$
          NUC_{frame} = img \cdot gain + offset - dark_{offset}
          $$
+      * Store the gain and offset data in Calibration Key Data (CKD) container. 
 
    * #### Bad Pixel Correction
       * Calculate the global variance of the pixels as a threshold.
@@ -126,7 +191,7 @@
       * Implement a Butterworth low-pass filter with parameters chosen by trial and error.
 
    * #### Image Restoration
-      * In the worst-case scenario, relying on the satellite's internal clock for image capture can introduce a 1-second timing offset, leading to a positional deviation of up to 7 km. Therefore, I use structures like take-off runways and bridges as MTF targets if I cannot capture dedicated MTF targets like Baotou.
+      * In the worst-case scenario, relying on the satellite's internal clock for image capture may introduce a 1-second timing offset, leading to a positional deviation of up to 7 km. Therefore, I use structures like take-off runways and bridges as MTF targets if I cannot capture dedicated MTF targets like Baotou.
 
       * ##### MTF Calculation and PSF Sharpening
          * Identify a suitable edge (close to main scan or cross-scan axes) with sufficient contrast and low noise.
@@ -138,7 +203,7 @@
          * Normalize the PSF kernel and convolve the image. Alternatively, use Wiener deconvolution.
 
    * #### Band Registration
-      * Because of subpixel alignment issues:
+      * Because of subpixel alignment issues:<br><br>
          1. Convert images to 8-bit and apply CLAHE to create dummy bands.
          2. Use the selected reference band to find keypoints and descriptors of the other bands with SIFT.
          3. Match keypoints with a FLANN-based matcher.
@@ -159,10 +224,11 @@
          $$
 
    * #### Atmospheric Correction
-      * Familiar with MODTRAN and LibRadTran atmospheric models.
-      * Used FLAASH model on ENVI for Landsat 8 OLI dataset.
-      * Because of MODTRAN licensing, follow the atmospheric correction algorithm indicated in **Landsat 8-9 Calibration and Validation (Cal/Val) Algorithm Description Document (ADD), page 776**.
-      * Work in progress on atmospheric modeling.
+     * Using Py6S for atmospheric correction
+     * Familiar with MODTRAN and LibRadTran atmospheric models.
+     * Used FLAASH model on ENVI for Landsat 8 OLI dataset.
+     * Because of MODTRAN licensing, follow the atmospheric correction algorithm indicated in **Landsat 8-9 Calibration and Validation (Cal/Val) Algorithm Description Document (ADD), page 776**.
+     * Work in progress on atmospheric modeling.
 
 ---
 

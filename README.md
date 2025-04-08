@@ -3,7 +3,7 @@
 
 
 - [**Personal Career Note**](#personal-career-note)
-- [$\textcolor{red}{\text{Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing}}$](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
+- <a href="#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing"><span style="color: red">Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing</span></a>
 
    - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
      - [1. Introduction](#1-introduction)
@@ -52,8 +52,8 @@
       - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
       - [Atmospheric Correction](#atmospheric-correction)
       - [Mathematical Modeling and SNR Simulation](#mathematical-modeling-and-snr-simulation)
-- [$\textcolor{red}{\text{Remote Sensing Software Engineer}}$](#remote-sensing-software-engineer)
-   - [$\textcolor{yellow}{\text{Tools and Skills}}$](#tools--skills)
+- $\textcolor{red}{\text{Remote Sensing Software Engineer}}$ [↗](#remote-sensing-software-engineer)
+   - $\textcolor{yellow}{\text{Tools and Skills}}$ [↗](#tools--skills)
    - [Experience with ESA, USGS, and NASA Products](#experience-with-esa-usgs-and-nasa-products)
    - [Remote Sensing Applications](#remote-sensing-applications)
    - [Sentinel 5P TROPOMI ATBD](#sentinel-5p-tropomi-atbd)
@@ -61,7 +61,7 @@
    - [Sentinel-2 and Landsat Constellation Processing](#sentinel-2-and-landsat-constellation-processing)
    - [ASTER Image Processing](#aster-image-processing)
    - [Image Processing with Deep Learning](#image-processing-with-deep-learning-python-opencv-keras)
-- [$\textcolor{red}{\text{Goofing Around Berlin}}$ :beer:](#goofing-around-berlin)
+- $\textcolor{red}{\text{Goofing Around Berlin}}$ :beer: [↗](#goofing-around-berlin)
 
 ---
 # Personal Career Note

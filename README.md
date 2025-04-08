@@ -52,7 +52,7 @@
       - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
       - [Atmospheric Correction](#atmospheric-correction)
       - [Mathematical Modeling and SNR Simulation](#mathematical-modeling-and-snr-simulation)
-- [<code style="color:red">**Remote Sensing Software Engineer**</code>](#remote-sensing-software-engineer)
+- [**<code style="color:red">Remote Sensing Software Engineer</code>**](#remote-sensing-software-engineer)
    - [<code style="color:yellow">Tools & Skills</code>](#tools--skills)
    - [Experience with ESA, USGS, and NASA Products](#experience-with-esa-usgs-and-nasa-products)
    - [Remote Sensing Applications](#remote-sensing-applications)
@@ -61,7 +61,7 @@
    - [Sentinel-2 and Landsat Constellation Processing](#sentinel-2-and-landsat-constellation-processing)
    - [ASTER Image Processing](#aster-image-processing)
    - [Image Processing with Deep Learning](#image-processing-with-deep-learning-python-opencv-keras)
-- [<code style="color:red">**Goofing Around Berlin :beer:**</code>](#goofing-around-berlin)
+- [*<code style="color:red">Goofing Around Berlin</code>*:beer:](#goofing-around-berlin)
 
 ---
 # Personal Career Note

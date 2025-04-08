@@ -1,9 +1,9 @@
-# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley: :satellite: :rocket:
+# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley: :satellite: :satellite:
 
 
 
 - [**Personal Career Note**](#personal-career-note)
-- [$${\color{red}Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing}$$](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
+- [**<span style="color:red">Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing</span>**](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
 
    - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
      - [1. Introduction](#1-introduction)
@@ -52,8 +52,8 @@
       - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
       - [Atmospheric Correction](#atmospheric-correction)
       - [Mathematical Modeling and SNR Simulation](#mathematical-modeling-and-snr-simulation)
-- [${\color{red}Remote Sensing Software Engineer}$](#remote-sensing-software-engineer)
-   - [${\color{yellow}Tools & Skills}$](#tools--skills)
+- [<span style="color:red">**Remote Sensing Software Engineer**</span>](#remote-sensing-software-engineer)
+   - [<span style="color:yellow">Tools & Skills</span>](#tools--skills)
    - [Experience with ESA, USGS, and NASA Products](#experience-with-esa-usgs-and-nasa-products)
    - [Remote Sensing Applications](#remote-sensing-applications)
    - [Sentinel 5P TROPOMI ATBD](#sentinel-5p-tropomi-atbd)
@@ -61,14 +61,14 @@
    - [Sentinel-2 and Landsat Constellation Processing](#sentinel-2-and-landsat-constellation-processing)
    - [ASTER Image Processing](#aster-image-processing)
    - [Image Processing with Deep Learning](#image-processing-with-deep-learning-python-opencv-keras)
-- [*<code style="color:red">Goofing Around Berlin</code>*:beer:](#goofing-around-berlin)
+- [<span style="color:red">**Goofing Around Berlin :beer:**</span>](#goofing-around-berlin)
 
 ---
 # Personal Career Note
 
-   *I am a Satellite Image Processing and CalVal Engineer, as well as a Remote Sensing Engineer.I specialize in developing and implementing algorithms for the calibration and validation of pushbroom multispectral and hyperspectral (SWIR) spaceborne / airborne optical instruments and preprocessing between Level 0 - Level 2 dataset. I have experience with ${\color{yellow}**cassegrain telescope and hyperspectral diffractive telescope, hyperspectral (SWIR), Thermal and multispectral sensors up to **VNIR****}$ for remote sensing applications. So far, I've participated in 11 satellite missions, focusing on multispectral and hyperspectral imaging systems, covering design,manufacturing, testing, launch, on-orbit calibration/validation, and ground segment software development. My interdisciplinary experience extends to AOCS,Software Engineering, System Engineering, Optical Design, Optoelectronics, and Mission Planning.
+   *I am a Satellite Image Processing and CalVal Engineer, as well as a Remote Sensing Engineer.I specialize in developing and implementing algorithms for the calibration and validation of pushbroom multispectral and hyperspectral (SWIR) spaceborne / airborne optical instruments and preprocessing between Level 0 - Level 2 dataset. I have experience with <span style="color: yellow">**cassegrain telescope and hyperspectral diffractive telescope, hyperspectral (SWIR), Thermal and multispectral sensors up to **VNIR****</span> for remote sensing applications. So far, I’ve participated in 11 satellite missions, focusing on multispectral and hyperspectral imaging systems, covering design,manufacturing, testing, launch, on-orbit calibration/validation, and ground segment software development. My interdisciplinary experience extends to AOCS,Software Engineering, System Engineering, Optical Design, Optoelectronics, and Mission Planning.
 <br><br>
-   * ${\color{red}**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.}$
+   * <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
 
 ---
 # Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing 

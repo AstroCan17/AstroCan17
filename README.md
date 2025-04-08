@@ -1,10 +1,9 @@
-# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley:
+# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley: :satellite: :rocket:
 
-# Table of Contents
 
-- **[Table of Contents](#table-of-contents)
-- [Personal Career Note](#personal-career-note)
-- [Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
+
+- [**Personal Career Note**](#personal-career-note)
+- [**<span style="color:red">Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing</span>**](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
 
    - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
      - [1. Introduction](#1-introduction)
@@ -42,23 +41,32 @@
         - [Additional Features](#additional-features)
      - [Requirements and Development Framework](#requirements-and-development-framework)
      - [Project Structure](#project-structure)
-     - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
-        - [Non Uniformity Correction (NUC)](#non-uniformity-correction-nuc)
-        - [Bad Pixel Correction](#bad-pixel-correction)
-        - [Denoising](#denoising)
-        - [Image Restoration](#image-restoration)
-           - [MTF Calculation and PSF Sharpening](#mtf-calculation-and-psf-sharpening)
-        - [Band Registration](#band-registration)
-        - [Georeferencing Process](#georeferencing-process)
-        - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
-        - [Atmospheric Correction](#atmospheric-correction)
-- [Remote Sensing Software Engineer](#remote-sensing-software-engineer)
-- [Goofing Around Berlin :beer:](#goofing-around-berlin)
+   - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
+      - [Non Uniformity Correction (NUC)](#non-uniformity-correction-nuc)
+      - [Bad Pixel Correction](#bad-pixel-correction)
+      - [Denoising](#denoising)
+      - [Image Restoration](#image-restoration)
+         - [MTF Calculation and PSF Sharpening](#mtf-calculation-and-psf-sharpening)
+      - [Band Registration](#band-registration)
+      - [Georeferencing Process](#georeferencing-process)
+      - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
+      - [Atmospheric Correction](#atmospheric-correction)
+      - [Mathematical Modeling and SNR Simulation](#mathematical-modeling-and-snr-simulation)
+- [<span style="color:red">**Remote Sensing Software Engineer**</span>](#remote-sensing-software-engineer)
+   - [<span style="color:yellow">Tools & Skills</span>](#tools--skills)
+   - [Experience with ESA, USGS, and NASA Products](#experience-with-esa-usgs-and-nasa-products)
+   - [Remote Sensing Applications](#remote-sensing-applications)
+   - [Sentinel 5P TROPOMI ATBD](#sentinel-5p-tropomi-atbd)
+   - [Tool Development on Qt Designer](#tool-development-on-qt-designer)
+   - [Sentinel-2 and Landsat Constellation Processing](#sentinel-2-and-landsat-constellation-processing)
+   - [ASTER Image Processing](#aster-image-processing)
+   - [Image Processing with Deep Learning](#image-processing-with-deep-learning-python-opencv-keras)
+- [<span style="color:red">**Goofing Around Berlin :beer:**</span>](#goofing-around-berlin)
 
 ---
 # Personal Career Note
 
-   * <span style="color: white">About me: So far, I have participated in 9 CubeSat and 2 SmallSat projects. I was involved in the end-to-end production of 9 of these, and we launched them into Low Earth Orbit (LEO). The satellites are still actively continuing their missions.</span>
+   *I am a Satellite Image Processing and CalVal Engineer, as well as a Remote Sensing Engineer.I specialize in developing and implementing algorithms for the calibration and validation of pushbroom multispectral and hyperspectral (SWIR) spaceborne / airborne optical instruments and preprocessing between Level 0 - Level 2 dataset. I have experience with <span style="color: yellow">**cassegrain telescope and hyperspectral diffractive telescope, hyperspectral (SWIR), Thermal and multispectral sensors up to **VNIR****</span> for remote sensing applications. So far, I’ve participated in 11 satellite missions, focusing on multispectral and hyperspectral imaging systems, covering design,manufacturing, testing, launch, on-orbit calibration/validation, and ground segment software development. My interdisciplinary experience extends to AOCS,Software Engineering, System Engineering, Optical Design, Optoelectronics, and Mission Planning.
 <br><br>
    * <span style="color: red">**Note**: This document has been prepared using publicly available information from the literature and reflects concepts I have learned during my professional experience. It does not include any proprietary or confidential information.</span>
 
@@ -293,18 +301,69 @@
      * Used FLAASH model on ENVI for Landsat 8 OLI dataset.
      * Because of MODTRAN licensing, follow the atmospheric correction algorithm indicated in **Landsat 8-9 Calibration and Validation (Cal/Val) Algorithm Description Document (ADD), page 776**.
      * Work in progress on atmospheric modeling.
+   * ### Mathematical Modeling and SNR Simulation
+     * Expertise in mathematical modeling of the optics and sensor integrated system to calculate total photon collected by camera depending on the satellite's attitude (roll, pitch,yaw). 
 
 ---
 # Remote Sensing Software Engineer
 
+   * ## Tools & Skills
+      * Proficient in **Python**, **C** and **MATLAB**.
+      * Experienced in **cloud-based deployments, implementing CI/CD, Git, Pytest, Docker, and PEP 8** compliance for robust software engineering.
+      * Utilize **GPU Programming**, **Cloud Computing**, **Database Management** and **Container-based isolated Development**
+      * Skilled in software like **ENVI**, **ArcMap**, **Global Mapper**, **QGIS**, and **PCI Geomatica**.
+      * Comfortable with **Linux** environments, shell scripting, **git / github** and containerization (**Docker**). 
+      * Leverage various **Python libraries** indicated in the skills section (e.g., NumPy, GDAL, etc.).
+      * Comprehensive understanding of the entire data processing and mission planning lifecycle, from design to deployment, ensuring high-quality data products and efficient satellite operations. 
 
+   * ## Experience with ESA, USGS, and NASA Products
+      * **Sentinel-1 (SAR)**
+      * **Sentinel-2 A/B**
+      * **Sentinel-5P**
+      * **Landsat 7/8/9**
+      * **ASTER**
+      * **MRO CTX** and **HiRISE**
+   
+   * ### Remote Sensing Applications
+       * Metallic mineral exploration
+       * Fault line detection
+       * Natural disaster analysis
+       * NDVI, NDWI, NBR
+       * Image segmentation
+       * Deep learning approaches
+       * Surface deformation detection
+   * ## Sentinel 5P TROPOMI ATBD
+     * Deep knowledge in Sentinel 5P TROPOMI Algorithm Theoretical Basis Document (ATBD)
+     * Deep knowledge in Sentinel 2 ATBD  
+   * ## Tool Development on Qt Designer
+     * Developed **image processing pipeline** tools.
+     * Created **image database** search and download utilities.
 
+   * ## Sentinel-2 and Landsat Constellation Processing
+     * Processed images for:
+       * **Normalized Difference Vegetation Index (NDVI)**
+       * **Normalized Difference Water Index (NDWI)**
+       * **Normalized Burn Ratio (NBR)**
+       * **Lineament extraction**
 
+   * ## ASTER Image Processing
+     * Leveraged ASTER's **VNIR, SWIR, and TIR channels**.
+     * Processed ASTER data to identify minerals and mineral groups for **mining applications**.
 
-
-
+   * ## Image Processing with Deep Learning (Python, OpenCV, Keras)
+     * **Purpose:** To detect and identify target objects in satellite imagery using both onboard and ground segment software
+     * **Object detection** using color segmentation, template matching, corner/edge/contour detection.
+     * Implemented:
+       * Feature matching
+       * Watershed algorithm
+       * Face and cat-face recognition
+       * Pedestrian detection
+       * Developed various **object tracking** algorithms.
+       * Built **CNNs** for real-time digit classification and object detection.
+       * Utilized pyramid representation, sliding window, non-maximum suppression, and region proposals.
+      * Implemented **R-CNN, YOLO,** and **SSD** for object detection.
 
 ---
 # Goofing Around Berlin
-   * I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog, feel free to get in touch! :trollface: :sunglasses:
+   * I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog, feel free to get in touch! :sunglasses:
 

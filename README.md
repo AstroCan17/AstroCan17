@@ -3,53 +3,17 @@
 # Table of Contents
 
 **- [Table of Contents](#table-of-contents)
+- [Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley:](#would-you-like-to-see-my-blood-sweat-and-tears-so-far-muscle-go-ahead-houston---smiley)
+- [Table of Contents](#table-of-contents)
 - [Personal Career Note](#personal-career-note)
-- [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
-  - [1. Introduction](#1-introduction)
-  - [2. Calibration Objectives](#2-calibration-objectives)
-    - [Spectral Calibration](#spectral-calibration)
-    - [Radiometric Calibration](#radiometric-calibration)
-    - [Geometric (Spatial) Calibration](#geometric-spatial-calibration)
-  - [3. Methodology and Calibration Steps](#3-methodology-and-calibration-steps)
-    - [Pre-Calibration Alignment](#pre-calibration-alignment)
-      - [Mechanical Alignment](#mechanical-alignment)
-      - [Dark Signal and Offset](#dark-signal-and-offset)
-    - [Spectral Calibration](#spectral-calibration-1)
-      - [Wavelength Registration](#wavelength-registration)
-      - [Smile and Keystone](#smile-and-keystone)
-      - [Stability Tests](#stability-tests)
-    - [Radiometric Calibration](#radiometric-calibration-1)
-      - [Absolute Radiance Calibration](#absolute-radiance-calibration)
-      - [Linearity and Noise](#linearity-and-noise)
-      - [Stray Light Assessment](#stray-light-assessment)
-    - [Geometric Calibration](#geometric-calibration)
-      - [PSF Mapping](#psf-mapping)
-      - [Field-of-View Verification](#field-of-view-verification)
-      - [Smile and Keystone Validation](#smile-and-keystone-validation)
-  - [4. Data Analysis and Correction](#4-data-analysis-and-correction)
-    - [Key Data Products](#key-data-products)
-    - [Uncertainty Estimation](#uncertainty-estimation)
-    - [Validation](#validation)
-- [Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)](#pushbroom-multispectral-high-resolution-camera-calibration-and-pre-processing-l0-l2)
-  - [Overview](#overview)
-    - [Level 0 Data](#level-0-data)
-    - [Level 1 Radiometric Corrections](#level-1-radiometric-corrections)
-    - [Band Co-registration](#band-co-registration)
-    - [Georeferencing](#georeferencing)
-    - [Level 2 Processing](#level-2-processing)
-    - [Additional Features](#additional-features)
-  - [Requirements and Development Framework](#requirements-and-development-framework)
-  - [Project Structure](#project-structure)
-  - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
-    - [Non Uniformity Correction (NUC)](#non-uniformity-correction-nuc)
-    - [Bad Pixel Correction](#bad-pixel-correction)
-    - [Denoising](#denoising)
-    - [Image Restoration](#image-restoration)
-      - [MTF Calculation and PSF Sharpening](#mtf-calculation-and-psf-sharpening)
-    - [Band Registration](#band-registration)
-    - [Georeferencing](#georeferencing-1)
-    - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
-    - [Atmospheric Correction](#atmospheric-correction)
+  - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
+    - [1. Introduction](#1-introduction)
+    - [2. Calibration Objectives](#2-calibration-objectives)
+    - [3. Methodology and Calibration Steps](#3-methodology-and-calibration-steps)
+    - [4. Data Analysis and Correction](#4-data-analysis-and-correction)
+  - [Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)](#pushbroom-multispectral-high-resolution-camera-calibration-and-pre-processing-l0-l2)
+    - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
+- [Goofing Around Berlin](#goofing-around-berlin)
 
 
 ---
@@ -295,5 +259,6 @@
 
 ---
 
-End of Work Summary
+# Goofing Around Berlin
+   * I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog, feel free to get in touch! :trollface: :sunglasses:
 

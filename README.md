@@ -3,7 +3,7 @@
 
 
 - [**Personal Career Note**](#personal-career-note)
-- <a href="#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing"><color style="color: red">Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing</color></a>
+- $\textcolor{red}{\text{Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing}}$ [↗](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
 
    - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
      - [1. Introduction](#1-introduction)

@@ -376,6 +376,14 @@
       * Implemented **R-CNN, YOLO,** and **SSD** for object detection.
 
 ---
+
+
+
+
+
+
+
+---
 # Goofing Around Berlin
    * I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog, feel free to get in touch! :sunglasses:
 

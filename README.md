@@ -82,6 +82,15 @@
      $\textcolor{red}{\text{professional experience. It does not include any proprietary or confidential}}$
      $\textcolor{red}{\text{information.}}$
 
+## Mission Patches
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img src="mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" width="200" alt="Connecta T1.1">
+    <img src="mission_patches/Connecta%20T1.2%20Mission%20Patch.jpg" width="200" alt="Connecta T1.2">
+    <img src="mission_patches/Connecta%20T2.1%20Mission%20Patch.jpg" width="200" alt="Connecta T2.1">
+    <img src="mission_patches/Connecta%20T3.1%20%26%20T3.2%20ISL%20Twin%20Cubesats%20Mission%20Patch.jpg" width="200" alt="Connecta T3.1 & T3.2">
+</div>
+
 ---
 # Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing 
 

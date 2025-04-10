@@ -98,7 +98,12 @@
 
 ### 1. Introduction
 
-   * The purpose of this report is to outline a detailed calibration procedure for the optical hyperspectral spectrometer to be used in spaceborne applications. Following the calibration framework provided in Baumgartner's thesis and leveraging the advanced facilities at DLR's Optical Calibration Laboratory, the objective is to ensure spectral, radiometric, and geometric fidelity of the instrument in compliance with the specified requirements. The calibration campaign will address detector-related effects, spectral response, radiometric accuracy, and geometric alignment.
+   * I perform laboratory calibration of optical hyperspectral spectrometers for spaceborne applications. Following Baumgartner's calibration framework and utilizing DLR's Optical Calibration Laboratory facilities, I ensure the instrument meets its spectral, radiometric, and geometric fidelity requirements. Through my calibration campaign, I systematically address and characterize:
+      * Detector-related effects
+      * Spectral response characteristics
+      * Radiometric accuracy parameters
+      * Geometric alignment specifications
+   * This comprehensive calibration process allows me to validate that the instrument will perform according to mission specifications once deployed in space.
 
 ### 2. Calibration Objectives
    * #### Spectral Calibration 

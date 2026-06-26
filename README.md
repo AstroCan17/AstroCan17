@@ -1,403 +1,234 @@
-# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead Houston ...  :smiley: :satellite: :satellite:
+# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead, Houston … :satellite: :satellite:
 
+> **Satellite Image Processing & Cal/Val Engineer · Remote Sensing Engineer** — 11 satellite
+> missions across design, manufacturing, test, launch, on-orbit calibration/validation, and
+> ground-segment software. Pushbroom multispectral & hyperspectral (SWIR) optical instruments,
+> L0→L2 processing, and Earth-observation ML.
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![MATLAB](https://img.shields.io/badge/MATLAB-E16737?style=for-the-badge&logo=mathworks&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![GDAL](https://img.shields.io/badge/GDAL-5CAE58?style=for-the-badge&logo=gdal&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Dask](https://img.shields.io/badge/Dask-FC6E6B?style=for-the-badge&logo=dask&logoColor=white)
+![Qt](https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=qt&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![ESA](https://img.shields.io/badge/ESA-Sentinel%201%2F2%2F5P-003247?style=for-the-badge)
+![USGS](https://img.shields.io/badge/USGS-Landsat%207%2F8%2F9-006633?style=for-the-badge)
+![NASA](https://img.shields.io/badge/NASA-ASTER%20·%20MRO-0B3D91?style=for-the-badge)
 
-- [**Personal Career Note**](#personal-career-note)
-- $\textcolor{red}{\text{Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing}}$ [↗](#ground-segment-system-software-engineering---satellite-camera-design-calibration-and-image-preprocessing)
+**Find me:** [LinkedIn](<!-- TODO: LinkedIn URL -->) · [Email](mailto:candenizkaya17@gmail.com) · Berlin :de:
 
-   - [Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)](#pushbroom-optical-hyperspectral-spectrometer-calibration-and-pre-processing-l0-l1b)
-     - [1. Introduction](#1-introduction)
-     - [2. Calibration Objectives](#2-calibration-objectives)
-        - [Spectral Calibration](#spectral-calibration)
-        - [Radiometric Calibration](#radiometric-calibration)
-        - [Geometric (Spatial) Calibration](#geometric-spatial-calibration)
-     - [3. Methodology and Calibration Steps](#3-methodology-and-calibration-steps)
-        - [Pre-Calibration Alignment](#pre-calibration-alignment)
-           - [Mechanical Alignment](#mechanical-alignment)
-           - [Dark Signal and Offset](#dark-signal-and-offset)
-        - [Spectral Calibration](#spectral-calibration-1)
-           - [Wavelength Registration](#wavelength-registration)
-           - [Smile and Keystone](#smile-and-keystone)
-           - [Stability Tests](#stability-tests)
-        - [Radiometric Calibration](#radiometric-calibration-1)
-           - [Absolute Radiance Calibration](#absolute-radiance-calibration)
-           - [Linearity and Noise](#linearity-and-noise)
-           - [Stray Light Assessment](#stray-light-assessment)
-        - [Geometric Calibration](#geometric-calibration)
-           - [PSF Mapping](#psf-mapping)
-           - [Field-of-View Verification](#field-of-view-verification)
-           - [Smile and Keystone Validation](#smile-and-keystone-validation)
-     - [4. Data Analysis and Correction](#4-data-analysis-and-correction)
-        - [Key Data Products](#key-data-products)
-        - [Uncertainty Estimation](#uncertainty-estimation)
-        - [Validation](#validation)
-   - [Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)](#pushbroom-multispectral-high-resolution-camera-calibration-and-pre-processing-l0-l2)
-     - [Overview](#overview)
-        - [Level 0 Data](#level-0-data)
-        - [Level 1 Radiometric Corrections](#level-1-radiometric-corrections)
-        - [Band Co-registration](#band-co-registration)
-        - [Georeferencing](#georeferencing)
-        - [Level 2 Processing](#level-2-processing)
-        - [Additional Features](#additional-features)
-     - [Requirements and Development Framework](#requirements-and-development-framework)
-     - [Project Structure](#project-structure)
-   - [On-Orbit Radiometric, Spatial, and Geometric Calibration](#on-orbit-radiometric-spatial-and-geometric-calibration)
-      - [Non Uniformity Correction (NUC)](#non-uniformity-correction-nuc)
-      - [Bad Pixel Correction](#bad-pixel-correction)
-      - [Denoising](#denoising)
-      - [Image Restoration](#image-restoration)
-         - [MTF Calculation and PSF Sharpening](#mtf-calculation-and-psf-sharpening)
-      - [Band Registration](#band-registration)
-      - [Georeferencing Process](#georeferencing-process)
-      - [Top of Atmospheric (TOA) Conversion](#top-of-atmospheric-toa-conversion)
-      - [Atmospheric Correction](#atmospheric-correction)
-      - [Mathematical Modeling and SNR Simulation](#mathematical-modeling-and-snr-simulation)
-- $\textcolor{red}{\text{Remote Sensing Software Engineer}}$ [↗](#remote-sensing-software-engineer)
-   - $\textcolor{yellow}{\text{Tools and Skills}}$ [↗](#tools--skills)
-   - [Experience with ESA, USGS, and NASA Products](#experience-with-esa-usgs-and-nasa-products)
-   - [Remote Sensing Applications](#remote-sensing-applications)
-   - [Sentinel 5P TROPOMI ATBD](#sentinel-5p-tropomi-atbd)
-   - [Tool Development on Qt Designer](#tool-development-on-qt-designer)
-   - [Sentinel-2 and Landsat Constellation Processing](#sentinel-2-and-landsat-constellation-processing)
-   - [ASTER Image Processing](#aster-image-processing)
-   - [Image Processing with Deep Learning](#image-processing-with-deep-learning-python-opencv-keras)
-- $\textcolor{red}{\text{Goofing Around Berlin}}$ :beer: [↗](#goofing-around-berlin)
+> :red_circle: **Note:** This profile is prepared using publicly available information from the
+> literature and reflects concepts I have learned during my professional experience. It does **not**
+> include any proprietary or confidential information.
 
----
-# Personal Career Note
+### Mission Patches
 
-   *I am a Satellite Image Processing and CalVal Engineer, as well as a Remote Sensing Engineer.
-
-   I specialize in developing and implementing algorithms for the calibration and validation of pushbroom multispectral and hyperspectral (SWIR) spaceborne / airborne optical instruments and preprocessing between Level 0 - Level 2 dataset. 
-   
-   I have experience with $\textcolor{yellow}{\text{cassegrain telescope}}$ and $\textcolor{yellow}{\text{hyperspectral diffractive telescope}}$, $\textcolor{yellow}{\text{hyperspectral (SWIR)}}$, $\textcolor{yellow}{\text{Thermal and multispectral sensors up to VNIR}}$ for remote sensing applications. 
-   
-   So far, I've participated in 11 satellite missions, focusing on multispectral and hyperspectral imaging systems, covering design, manufacturing, testing, launch, on-orbit calibration/validation, and ground segment software development. 
-   
-   My interdisciplinary experience extends to AOCS, Software Engineering, System Engineering, Optical Design, Optoelectronics, and Mission Planning.
-<br><br>
-   * $\textcolor{red}{\text{Note:}}$ 
-     $\textcolor{red}{\text{This document has been prepared using publicly available information}}$
-     $\textcolor{red}{\text{from the literature and reflects concepts I have learned during my}}$
-     $\textcolor{red}{\text{professional experience. It does not include any proprietary or confidential}}$
-     $\textcolor{red}{\text{information.}}$
-
-## Mission Patches
-
-<div style="display: flex; justify-content: center; gap: 10px;">
-    <img src="mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" width="200" alt="Connecta T1.1">
-    <img src="mission_patches/Connecta%20T1.2%20Mission%20Patch.jpg" width="200" alt="Connecta T1.2">
-    <img src="mission_patches/Connecta%20T2.1%20Mission%20Patch.jpg" width="200" alt="Connecta T2.1">
-    <img src="mission_patches/Connecta%20T3.1%20%26%20T3.2%20ISL%20Twin%20Cubesats%20Mission%20Patch.jpg" width="200" alt="Connecta T3.1 & T3.2">
+<div align="center">
+    <img src="mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" width="170" alt="Connecta T1.1">
+    <img src="mission_patches/Connecta%20T1.2%20Mission%20Patch.jpg" width="170" alt="Connecta T1.2">
+    <img src="mission_patches/Connecta%20T2.1%20Mission%20Patch.jpg" width="170" alt="Connecta T2.1">
+    <img src="mission_patches/Connecta%20T3.1%20%26%20T3.2%20ISL%20Twin%20Cubesats%20Mission%20Patch.jpg" width="170" alt="Connecta T3.1 & T3.2">
 </div>
 
 ---
-# Ground Segment System Software Engineering - Satellite Camera Design, Calibration and Image Preprocessing 
 
-## Pushbroom Optical Hyperspectral Spectrometer Calibration and Pre-processing (L0-L1b)
+## :artificial_satellite: Featured Projects
 
-### 1. Introduction
+### [eo-data-embedding](https://github.com/AstroCan17/eo-data-embedding) — multi-modal geospatial embedding search & change detection
 
-   * I perform laboratory calibration of optical hyperspectral spectrometers for spaceborne applications. Following Baumgartner's calibration framework and utilizing DLR's Optical Calibration Laboratory facilities, I ensure the instrument meets its spectral, radiometric, and geometric fidelity requirements. Through my calibration campaign, I systematically address and characterize:
-      * Detector-related effects
-      * Spectral response characteristics
-      * Radiometric accuracy parameters
-      * Geometric alignment specifications
-   * This comprehensive calibration process allows me to validate that the instrument will perform according to mission specifications once deployed in space.
+[![CI](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/ci.yml/badge.svg)](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/ci.yml)
+[![docs](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/docs.yml/badge.svg)](https://astrocan17.github.io/eo-data-embedding/)
+[![license](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/AstroCan17/eo-data-embedding/blob/main/LICENSE)
+[![ECSS](https://img.shields.io/badge/ECSS--E--ST--40C-tailored-5b2c8f)](https://github.com/AstroCan17/eo-data-embedding/tree/main/compliance)
 
-### 2. Calibration Objectives
-   * #### Spectral Calibration 
-      * Determine the Instrument Spectral Response Function (ISRF) as a function of wavelength and pixel position.
-      * Verify ISRF Full Width at Half Maximum (FWHM) meets the target.
-      * Validate spectral oversampling and a spectral sampling interval.
-      * Characterize and minimize smile and keystone effects to thresholds below acceptable levels.
-      * Confirm pixel spectral linearity and ISRF stability under thermal and mechanical perturbations.
-      * Measure and characterize spectral resolution across the full spectral range.
-      * Determine wavelength calibration accuracy and precision.
-      * Evaluate spectral sampling interval and spectral resolution stability.
+Embed Sentinel-1/2 imagery **once** with a frozen **Clay v1.5** Vision Transformer, then run every
+downstream task cheaply over the stored vectors — **similarity search**, **few-shot classification**
+and **bitemporal change detection** — with no per-task fine-tuning and no GPU at query time. Ships a
+plug-and-play **CPU-only demo** (`eo-data-embedding demo`).
 
-   * #### Radiometric Calibration
-      * Establish a radiometric reference achieving high multiplicative accuracy using multiple radiance levels.
-      * Verify overall optical transmission and detector response consistency.
-      * Ensure radiometric stability and zero-level offset stability.
-      * Validate detector linearity up to the saturation level and stray light contributions.
+Developed following a **proportionate, tailored ECSS software-engineering lifecycle** for
+Earth-observation ML data-processing software (ECSS-E-ST-40C engineering + DRD set, ECSS-E-HB-40-02A
+ML V&V, ECSS-Q-ST-80C product assurance), with honest evaluation — negative results reported, not hidden.
 
-   * #### Geometric (Spatial) Calibration
-      * Characterize focal length, aperture, slit geometry, and alignment.
-      * Confirm spatial sampling distance at specified orbital altitude.
-      * Measure and correct spatial smile and keystone effects to below the specified threshold for design.
+:link: [Repository](https://github.com/AstroCan17/eo-data-embedding) ·
+:books: [Documentation](https://astrocan17.github.io/eo-data-embedding/) ·
+:test_tube: [V&V report](https://github.com/AstroCan17/eo-data-embedding/blob/main/compliance/drd/vv-report.md)
 
-### 3. Methodology and Calibration Steps
-   * #### Pre-Calibration Alignment
-      * ##### Mechanical Alignment
-         * Mount the instrument on a vibration-isolated optical table.
-         * Verify alignment of optical components using a collimated reference beam.
-         * Record slit orientation and grating alignment.
-
-      * ##### Dark Signal and Offset
-         * Operate the detector in a dark and thermally controlled environment.
-         * Characterize dark current and offset for reserved dark pixels.
-
-   * #### Spectral Calibration
-      * ##### Wavelength Registration
-         * Use a monochromator to supply narrow spectral lines across the spectrometer's bandwidth.
-         * Measure ISRF profiles for each pixel and extract FWHM.
-
-      * ##### Smile and Keystone
-         * Shift the illumination spot across the Field of View (FoV) and record spectral and spatial shifts.
-
-      * ##### Stability Tests
-         * Simulate thermal and mechanical stresses and evaluate ISRF variation.
-
-   * #### Radiometric Calibration
-      * ##### Absolute Radiance Calibration
-         * Illuminate the entrance slit with a calibrated integrating sphere.
-         * Derive gain and offset coefficients for each pixel.
-
-      * ##### Linearity and Noise
-         * Assess signal-to-noise ratio (SNR), dark current, and readout noise.
-         * Vary integration time and radiance levels to confirm detector linearity.
-
-      * ##### Stray Light Assessment
-         * Simulate high-contrast scenes and evaluate stray light suppression.
-
-   * #### Geometric Calibration
-      * ##### PSF Mapping
-         * Use a collimated beam and pinhole mask to map the Point Spread Function (PSF).
-
-      * ##### Field-of-View Verification
-         * Measure FoV and ensure alignment with design specifications.
-
-      * ##### Smile and Keystone Validation
-         * Introduce distinct spectral lines across the FoV and measure detector output to quantify smile and keystone effects.
-
-### 4. Data Analysis and Correction
-   * #### Key Data Products
-      * Spectral calibration files (ISRF maps, wavelength alignment).
-      * Radiometric calibration files (gain, offset, linearity corrections).
-      * Geometric calibration files (distortion maps, smile/keystone corrections).
-
-   * #### Uncertainty Estimation
-      * Assess calibration uncertainties based on reference standards and environmental stability.
-      * Document potential sources of error, including mechanical shifts and signal noise.
-
-   * #### Validation
-      * Apply calibration files to a test dataset and verify compliance with requirements.
+> :construction: **More to come** — additional EO processing repos (multispectral L0–L2,
+> georeferencing) are being reworked to the same ECSS-tailored lifecycle and consolidated under
+> [`eopf-data-processor`](https://github.com/AstroCan17/eopf-data-processor).
 
 ---
 
-## Pushbroom Multispectral High-Resolution Camera Calibration and Pre-processing (L0-L2)
+## :toolbox: Skills & Tools
 
-   * Responsible for developing calibration, validation and preprocessing pipeline ground segment software starting from **Level-0 (raw)** to **Level-2 (science ready dataset)**. The pipeline includes the following information and algorithms:
+- **Languages:** Python · C · MATLAB
+- **EO / imaging:** GDAL · rasterio · OpenCV · scikit-image · NumPy · Earth Engine API · Py6S
+- **ML / DL:** PyTorch · Keras · CNNs · R-CNN / YOLO / SSD
+- **Infra / engineering:** Docker · Kubernetes · Dask (distributed) · CI/CD · Git · Pytest · PEP 8 · GPU programming · Linux / shell
+- **GIS / tooling:** ENVI · ArcMap · QGIS · Global Mapper · PCI Geomatica · Qt Designer
+- **Products:** Sentinel-1 (SAR) · Sentinel-2 A/B · Sentinel-5P · Landsat 7/8/9 · ASTER · MRO CTX / HiRISE
+- **Domains:** AOCS · System Engineering · Optical Design · Optoelectronics · Mission Planning
 
-      * ### Multispectral Demo Satellite Preprocessing Pipeline
-         A demonstration preprocessing pipeline for pushbroom multispectral optical instruments (under development).
-         <br><br>
-
-         This project implements an image preprocessing pipeline for multispectral satellite imagery, with features including:
-         * #### Level 0 corrections including: 
-           * decoding
-           * missing package check, flag generation
-         * #### Level 1 corrections including:
-            * ##### Non-uniformity correction (NUC):
-              * Using key data (gain,offset)
-            * ##### Dark current correction
-            * ##### Denoising:
-              * Using various filters or designing digital signal filters
-            * ##### Radiometric Conversion:
-              * using key data from lab or on-orbit calibration campaigns.
-            * ##### MTF Compensation / PSF deconvolution
-            * ##### Band co-registration
-               * Sensor image acquisition model or key point extraction and matching
-            * ##### Georeferencing
-               * Using GDAL or rasterio
-               * If possible, using central pixel coordinate from Metadata file to georeference image.
-               * If GNSS data is missing, downloading sentinel-2 images using TLE of the satellite and google earth engine. Thereafter, image-to-image georeferencing applied by keypoint extraction and matching. 
-            * ##### Calculation geolocation accuracy, CE95
-
-            * ##### Orthorectification
-         * #### Level 2:
-           * ##### Atmospheric correction:
-             * using Py6S
-         * #### Additionally:
-           * ##### Pansharpening
-             * Implemented various algorithms, including Simple Brovey, Gram-Schmidt, ESRI, and Brovey.
-           * ##### Image quality Report Generation: 
-              * To evaluate the quality of raw images and the effectiveness of the applied correction methods, metrics such as Peak Signal-to-Noise Ratio (PSNR), RMSE, SSIM, MSE, GIQE, CE95, radiometric accuracy are calculated and reported in PDF file.
-         * <br><br>
-
-         | Requirements | Testing and Development Framework |
-         |-------------|-----------------------------------|
-         | **Python and Packages:** | **Development Environment:** |
-         | - Python 3.x | - Docker, Kubernetes |
-         | - NumPy | - Dask for distributed computing |
-         | - OpenCV | **Testing:** |
-         | - GDAL | - Pytest for automated testing |
-         | - rasterio | - Unit Testing coverage |
-         | - scikit-image | - Comprehensive logging system |
-         | - matplotlib | |
-         | - Earth Engine API | |
-
-         ## Project Structure
-
-         - `02_scripts`
-            - Core processing scripts
-               - `level_0.py` - Level 0 processing
-               - `level_1.py` - Level 1 processing and corrections  
-               - `band_coreg.py` - Band co-registration
-               - `georeferencing_v1.py` - Georeferencing
-               - `metrics_ips.py` - Quality metrics
-               - `pansharp.py` - Pansharpening
-
-         ## License
-
-         This project is licensed under the GNU GPL v3 - see the `LICENSE` file for details.
-
-         <br><br>
-
-## On-Orbit Radiometric, Spatial, and Geometric Calibration
-   * I send commands to capture images of pseudo-invariant sites such as the Mauritania Desert, Dome-C, or Antarctic for the flatfield image at different TDI stages and exposure times. I follow the USGS Test Sites Catalog.
-   * I use images taken at night during passes over the Atlantic Ocean, ensuring there are no clouds and no light, as darkfield images.
-
-   * ### Non Uniformity Correction (NUC)
-      * Calculate the mean of each column for the flatfield and darkfield images. Call the results for each column `flatfield_desired` and `darkfield_desired`.
-      * Calculate gain and offset as:
-  
-         $$
-         gain = \frac{\overline{flatfield_{desired}} - \overline{darkfield_{desired}}}{flatfield_{desired} - darkfield_{desired}}
-         $$
-  
-         $$
-         offset = \overline{flatfield_{desired}} - gain \cdot flatfield_{desired}
-         $$
- 
-      * Apply non-uniformity correction and flatfielding simultaneously (NUC). A `dark_offset` parameter is taken from laboratory results:
-  
-         $$
-         NUC_{frame} = {img \cdot gain} + {offset - dark_{offset}}
-         $$
-  
-      * Store the gain and offset data in Calibration Key Data (CKD) container. 
-
-   * ### Bad Pixel Correction
-      * Calculate the global variance of the pixels as a threshold.
-      * Identify pixels exceeding the threshold.
-      * Replace bad pixels with the average value of neighboring pixels.
-
-   * ### Denoising
-      * Implement a Butterworth low-pass filter with parameters chosen by trial and error.
-
-   * ### Image Restoration
-      * In the worst-case scenario, relying on the satellite's internal clock for image capture may introduce a 1-second timing offset, leading to a positional deviation of up to 7 km. Therefore, I use structures like take-off runways and bridges as MTF targets if I cannot capture dedicated MTF targets like Baotou.
-
-      * #### MTF Calculation and PSF Sharpening
-         * Identify a suitable edge (close to main scan or cross-scan axes) with sufficient contrast and low noise.
-         * Construct the Edge Spread Function (ESF) from the edge.
-         * Derive the Line Spread Function (LSF) by differentiating the ESF.
-         * Take the normalized Fourier transform of the LSF to obtain the MTF.
-         * The PSF is derived from the MTF (Fourier Transform of the PSF).
-         * If the PSF is noisy or inaccurate, consider simulating a PSF model.
-         * Normalize the PSF kernel and convolve the image. Alternatively, use Wiener deconvolution.
-
-   * ### Band Registration
-      * Because of subpixel alignment issues:<br><br>
-         1. Convert images to 8-bit and apply CLAHE to create dummy bands.
-         2. Use the selected reference band to find keypoints and descriptors of the other bands with SIFT.
-         3. Match keypoints with a FLANN-based matcher.
-         4. Calculate the homography matrix.
-         5. Warp the bands relative to the reference band using the homography matrix.
-
-   * ### Georeferencing Process 
-      * Use Sentinel-2 bands as a reference for image-to-image georeferencing.
-      * Estimate coordinates of the image scene using TLE information.
-      * Download Sentinel-2 images from Google Earth Engine for those coordinates.
-      * Apply the same feature matching and warping method used in band registration.
-      * Copy the corner coordinates, CRS, and transform from Sentinel-2 to the T2.1 bands.
-
-   * ### Top of Atmospheric (TOA) Conversion
-      * The result of NUC is still in Digital Numbers. Convert to radiometric units using radiometric gain/offset for each band. The Sentinel-2 TOA Reflectance equation can be applied:
-  
-         $$
-         Radiance_{TOA} = (NUC_{frame} - radiance_{offset}) \cdot radiance_{gain}
-         $$
-
-   * ### Atmospheric Correction
-     * Using Py6S for atmospheric correction
-     * Familiar with MODTRAN and LibRadTran atmospheric models.
-     * Used FLAASH model on ENVI for Landsat 8 OLI dataset.
-     * Because of MODTRAN licensing, follow the atmospheric correction algorithm indicated in **Landsat 8-9 Calibration and Validation (Cal/Val) Algorithm Description Document (ADD), page 776**.
-     * Work in progress on atmospheric modeling.
-   * ### Mathematical Modeling and SNR Simulation
-     * Expertise in mathematical modeling of the optics and sensor integrated system to calculate total photon collected by camera depending on the satellite's attitude (roll, pitch,yaw). 
-
----
-# Remote Sensing Software Engineer
-
-   * ## Tools & Skills
-      * Proficient in **Python**, **C** and **MATLAB**.
-      * Experienced in **cloud-based deployments, implementing CI/CD, Git, Pytest, Docker, and PEP 8** compliance for robust software engineering.
-      * Utilize **GPU Programming**, **Cloud Computing**, **Database Management** and **Container-based isolated Development**
-      * Skilled in software like **ENVI**, **ArcMap**, **Global Mapper**, **QGIS**, and **PCI Geomatica**.
-      * Comfortable with **Linux** environments, shell scripting, **git / github** and containerization (**Docker**). 
-      * Leverage various **Python libraries** indicated in the skills section (e.g., NumPy, GDAL, etc.).
-      * Comprehensive understanding of the entire data processing and mission planning lifecycle, from design to deployment, ensuring high-quality data products and efficient satellite operations. 
-
-   * ## Experience with ESA, USGS, and NASA Products
-      * **Sentinel-1 (SAR)**
-      * **Sentinel-2 A/B**
-      * **Sentinel-5P**
-      * **Landsat 7/8/9**
-      * **ASTER**
-      * **MRO CTX** and **HiRISE**
-   
-   * ### Remote Sensing Applications
-       * Metallic mineral exploration
-       * Fault line detection
-       * Natural disaster analysis
-       * NDVI, NDWI, NBR
-       * Image segmentation
-       * Deep learning approaches
-       * Surface deformation detection
-   * ## Sentinel 5P TROPOMI ATBD
-     * Deep knowledge in Sentinel 5P TROPOMI Algorithm Theoretical Basis Document (ATBD)
-     * Deep knowledge in Sentinel 2 ATBD  
-   * ## Tool Development on Qt Designer
-     * Developed **image processing pipeline** tools.
-     * Created **image database** search and download utilities.
-
-   * ## Sentinel-2 and Landsat Constellation Processing
-     * Processed images for:
-       * **Normalized Difference Vegetation Index (NDVI)**
-       * **Normalized Difference Water Index (NDWI)**
-       * **Normalized Burn Ratio (NBR)**
-       * **Lineament extraction**
-
-   * ## ASTER Image Processing
-     * Leveraged ASTER's **VNIR, SWIR, and TIR channels**.
-     * Processed ASTER data to identify minerals and mineral groups for **mining applications**.
-
-   * ## Image Processing with Deep Learning (Python, OpenCV, Keras)
-     * **Purpose:** To detect and identify target objects in satellite imagery using both onboard and ground segment software
-     * **Object detection** using color segmentation, template matching, corner/edge/contour detection.
-     * Implemented:
-       * Feature matching
-       * Watershed algorithm
-       * Face and cat-face recognition
-       * Pedestrian detection
-       * Developed various **object tracking** algorithms.
-       * Built **CNNs** for real-time digit classification and object detection.
-       * Utilized pyramid representation, sliding window, non-maximum suppression, and region proposals.
-      * Implemented **R-CNN, YOLO,** and **SSD** for object detection.
+Comprehensive understanding of the entire data-processing and mission-planning lifecycle, from design
+to deployment — ensuring high-quality data products and efficient satellite operations.
 
 ---
 
+## :microscope: Deep dives
 
+The detail below is the substance of my day-to-day work — collapsed to keep this page scannable.
+Click any section to expand.
 
+<details>
+<summary><b>Ground-segment Cal/Val — Pushbroom hyperspectral spectrometer (L0–L1b)</b></summary>
 
+<br>
 
+I perform laboratory calibration of optical hyperspectral spectrometers for spaceborne applications.
+Following Baumgartner's calibration framework and utilizing DLR's Optical Calibration Laboratory
+facilities, I ensure the instrument meets its spectral, radiometric, and geometric fidelity
+requirements. The campaign systematically characterizes detector-related effects, spectral response,
+radiometric accuracy, and geometric alignment, validating that the instrument will perform to mission
+specification on orbit.
 
+**Calibration objectives**
+
+- **Spectral** — determine the Instrument Spectral Response Function (ISRF) vs. wavelength and pixel
+  position; verify ISRF FWHM; validate spectral oversampling and sampling interval; minimize smile and
+  keystone; confirm spectral linearity and ISRF stability under thermal/mechanical perturbation;
+  determine wavelength calibration accuracy.
+- **Radiometric** — establish a radiometric reference with high multiplicative accuracy over multiple
+  radiance levels; verify optical transmission and detector-response consistency; ensure radiometric
+  and zero-level offset stability; validate detector linearity up to saturation and stray-light
+  contributions.
+- **Geometric** — characterize focal length, aperture, slit geometry and alignment; confirm spatial
+  sampling distance at orbital altitude; correct spatial smile/keystone below the design threshold.
+
+**Methodology & steps**
+
+- *Pre-calibration alignment* — mount on a vibration-isolated optical table; verify optical components
+  with a collimated reference beam; record slit orientation and grating alignment. Operate the detector
+  in a dark, thermally controlled environment and characterize dark current and offset for reserved
+  dark pixels.
+- *Spectral* — use a monochromator to supply narrow spectral lines across the spectrometer's bandwidth;
+  measure ISRF profiles per pixel and extract FWHM. Shift the illumination spot across the FoV to record
+  spectral/spatial shifts (smile/keystone). Simulate thermal and mechanical stresses to evaluate ISRF
+  variation.
+- *Radiometric* — illuminate the entrance slit with a calibrated integrating sphere; derive per-pixel
+  gain and offset. Assess SNR, dark current and readout noise; vary integration time and radiance to
+  confirm linearity. Simulate high-contrast scenes to evaluate stray-light suppression.
+- *Geometric* — map the Point Spread Function with a collimated beam and pinhole mask; measure FoV
+  against design; quantify smile/keystone with distinct spectral lines across the FoV.
+
+**Data products & validation** — spectral (ISRF maps, wavelength alignment), radiometric (gain, offset,
+linearity) and geometric (distortion maps, smile/keystone) calibration files; uncertainty estimation
+against reference standards and environmental stability; validation by applying calibration files to a
+test dataset and verifying requirement compliance.
+
+</details>
+
+<details>
+<summary><b>Multispectral high-resolution camera — preprocessing pipeline (L0–L2)</b></summary>
+
+<br>
+
+Responsible for developing the calibration, validation and preprocessing **ground-segment software**
+from **Level-0 (raw)** to **Level-2 (science-ready)** for pushbroom multispectral optical instruments.
+
+- **Level 0** — decoding; missing-package check and flag generation.
+- **Level 1** — Non-Uniformity Correction (gain/offset key data); dark-current correction; denoising
+  (filters / designed digital signal filters); radiometric conversion from lab or on-orbit key data;
+  MTF compensation / PSF deconvolution; band co-registration (sensor acquisition model or keypoint
+  extraction & matching); georeferencing (GDAL/rasterio; central-pixel metadata coordinate, or — when
+  GNSS is missing — Sentinel-2 reference via TLE + Google Earth Engine, then image-to-image keypoint
+  matching); geolocation-accuracy (CE95); orthorectification.
+- **Level 2** — atmospheric correction (Py6S).
+- **Additional** — pansharpening (Simple Brovey, Gram-Schmidt, ESRI); image-quality report (PSNR, RMSE,
+  SSIM, MSE, GIQE, CE95, radiometric accuracy) generated to PDF.
+
+| Requirements | Testing & development framework |
+|-------------|-----------------------------------|
+| Python 3.x, NumPy, OpenCV, GDAL, rasterio, scikit-image, matplotlib, Earth Engine API | Docker · Kubernetes · Dask (distributed) · Pytest · unit-test coverage · comprehensive logging |
+
+</details>
+
+<details>
+<summary><b>On-orbit radiometric, spatial & geometric calibration — NUC / MTF / TOA</b></summary>
+
+<br>
+
+I command captures of pseudo-invariant sites (Mauritania Desert, Dome-C, Antarctic) for flatfield
+images at different TDI stages and exposure times (following the USGS Test Sites Catalog), and night
+passes over the Atlantic (no clouds, no light) as darkfield images.
+
+**Non-Uniformity Correction (NUC)** — mean each column of flatfield/darkfield (`flatfield_desired`,
+`darkfield_desired`), then:
+
+$$ gain = \frac{\overline{flatfield_{desired}} - \overline{darkfield_{desired}}}{flatfield_{desired} - darkfield_{desired}} $$
+
+$$ offset = \overline{flatfield_{desired}} - gain \cdot flatfield_{desired} $$
+
+Apply NUC and flatfielding simultaneously with a lab-derived `dark_offset`, and store gain/offset in a
+Calibration Key Data (CKD) container:
+
+$$ NUC_{frame} = img \cdot gain + offset - dark_{offset} $$
+
+**Bad-pixel correction** — global pixel variance as threshold; replace flagged pixels with neighbour
+average. **Denoising** — Butterworth low-pass (parameters by trial).
+
+**Image restoration / MTF** — internal-clock timing offset can introduce up to ~7 km positional
+deviation, so I use runways and bridges as MTF targets when dedicated targets (e.g. Baotou) aren't
+available. Build the Edge Spread Function from a high-contrast edge → differentiate to the Line Spread
+Function → normalized Fourier transform → MTF; derive PSF from the MTF (or simulate a PSF model when
+noisy); normalize the PSF kernel and convolve, or use Wiener deconvolution.
+
+**Band registration** — convert to 8-bit + CLAHE dummy bands; SIFT keypoints/descriptors vs. a
+reference band; FLANN matcher; homography; warp bands to the reference.
+
+**Georeferencing** — Sentinel-2 bands as image-to-image reference; estimate scene coordinates from TLE;
+download Sentinel-2 from Earth Engine; feature-match & warp; copy corner coordinates, CRS and transform.
+
+**TOA conversion** — convert NUC Digital Numbers to radiance with per-band radiometric gain/offset:
+
+$$ Radiance_{TOA} = (NUC_{frame} - radiance_{offset}) \cdot radiance_{gain} $$
+
+**Atmospheric correction** — Py6S; familiar with MODTRAN and LibRadTran; used FLAASH (ENVI) on Landsat-8
+OLI; due to MODTRAN licensing, follow the Landsat 8–9 Cal/Val ADD (p. 776). **Mathematical modeling &
+SNR** — optics+sensor integrated modeling to compute total photons collected as a function of attitude
+(roll, pitch, yaw).
+
+</details>
+
+<details>
+<summary><b>Remote-sensing applications & deep learning</b></summary>
+
+<br>
+
+- **ESA / USGS / NASA products:** Sentinel-1 (SAR), Sentinel-2 A/B, Sentinel-5P, Landsat 7/8/9, ASTER,
+  MRO CTX & HiRISE.
+- **Applications:** metallic-mineral exploration · fault-line detection · natural-disaster analysis ·
+  NDVI/NDWI/NBR · image segmentation · surface-deformation detection · lineament extraction.
+- **ATBD depth:** Sentinel-5P TROPOMI ATBD and Sentinel-2 ATBD.
+- **Tooling (Qt Designer):** image-processing pipeline tools; image database search & download utilities.
+- **ASTER:** VNIR/SWIR/TIR channels for mineral & mineral-group identification (mining applications).
+- **Deep learning (Python, OpenCV, Keras):** object detection via color segmentation, template matching,
+  corner/edge/contour detection; feature matching; watershed; pedestrian and face/cat-face recognition;
+  CNNs for real-time digit classification and object detection; pyramid representation, sliding window,
+  non-maximum suppression, region proposals; R-CNN, YOLO and SSD.
+
+</details>
 
 ---
-# Goofing Around Berlin
-   * I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog, feel free to get in touch! :sunglasses:
 
+## :beer: Goofing Around Berlin
+
+I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to
+grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics,
+parallel universes, or Laika the dog — feel free to get in touch! :sunglasses:

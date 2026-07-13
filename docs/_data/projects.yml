@@ -34,11 +34,11 @@
 - slug: sar-processor
   title: sar-processor
   pitch: Sensor-agnostic spaceborne SAR forward processor — L0 SAR packets to L1 SLC and L1 GRD on EOPF, Sentinel-1 reference profile.
-  status: Skeleton (pre-SRR)
-  status_class: skeleton
+  status: SRR complete (pre-CDR)
+  status_class: srr-baseline
   tags: [Python, EOPF, SAR, ECSS, Sentinel-1]
   repo: https://github.com/AstroCan17/sar-processor
-  docs: null
+  docs: https://astrocan17.github.io/sar-processor/
   image: null
   featured: true
 

@@ -82,11 +82,21 @@
       font-size: 0.9rem;
     }
     .site-footer a { color: var(--link); }
-    p, li, blockquote, td {
+    p, li, blockquote, td,
+    .hero-tagline,
+    .section-lead,
+    .note-callout p,
+    .project-card p,
+    .skill-block span {
       text-align: justify;
       text-justify: inter-word;
     }
-    h1, h2, h3, h4, h5, h6, summary, th { text-align: left; }
+    h1, h2, h3, h4, h5, h6, summary, th,
+    .hero-title,
+    .section-heading,
+    .section-link,
+    .contact-line,
+    .skill-block strong { text-align: left; }
     h1 { font-size: 1.85rem; margin-top: 0; }
     h2 { margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
     img { max-width: 100%; height: auto; }
@@ -122,11 +132,36 @@
       padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--border);
     }
+    .hero-title {
+      font-size: 1.85rem;
+      margin: 0 0 0.75rem;
+      line-height: 1.35;
+    }
     .hero-tagline {
       font-size: 1.1rem;
       color: var(--text-muted);
       margin: 0.5rem 0 1rem;
     }
+    .section-heading {
+      margin-top: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+      font-size: 1.35rem;
+    }
+    .section-lead {
+      margin: 1rem 0;
+      color: var(--text);
+    }
+    .section-link { margin: 1rem 0; }
+    .contact-line { margin: 0.75rem 0 0; }
+    .note-callout {
+      margin: 1.5rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid #da3633;
+      background: var(--bg-elevated);
+      border-radius: 0 6px 6px 0;
+    }
+    .note-callout p { margin: 0; color: var(--text-muted); }
     .hero-cta {
       display: flex;
       gap: 0.75rem;
@@ -151,8 +186,8 @@
       color: #fff;
     }
     .btn-primary:hover { background: #388bfd; color: #fff; }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; }
-    .badge-row img { height: 28px; width: auto; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; align-items: center; }
+    .badge-row img { height: 28px; width: auto; display: block; }
     .mission-patches {
       display: flex;
       flex-wrap: wrap;

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Home
-description: Satellite Image Processing & Cal/Val Engineer · Remote Sensing Engineer — portfolio and projects.
+description: Satellite Ground Segment Architect — Payload Data Processing — portfolio and projects.
 ---
 
 <div class="hero">
 
-# Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead, Houston … :satellite: :satellite:
+<h1 class="hero-title">Would you like to see my blood, sweat, and tears so far? 💪 Go ahead, Houston … 🛰️ 🛰️</h1>
 
 <p class="hero-tagline">
   <strong>Satellite Ground Segment Architect — Payload Data Processing</strong> — 14 satellite
@@ -20,21 +20,29 @@ description: Satellite Image Processing & Cal/Val Engineer · Remote Sensing Eng
 </div>
 
 <div class="badge-row">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
-  <img src="https://img.shields.io/badge/GDAL-5CAE58?style=for-the-badge&logo=gdal&logoColor=white" alt="GDAL">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/ESA-Sentinel%201%2F2%2F5P-003247?style=for-the-badge" alt="ESA">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" loading="lazy">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" loading="lazy">
+  <img src="https://img.shields.io/badge/MATLAB-E16737?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB" loading="lazy">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" loading="lazy">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" loading="lazy">
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" loading="lazy">
+  <img src="https://img.shields.io/badge/GDAL-5CAE58?style=for-the-badge&logo=gdal&logoColor=white" alt="GDAL" loading="lazy">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" loading="lazy">
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" loading="lazy">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" loading="lazy">
+  <img src="https://img.shields.io/badge/ESA-Sentinel%201%2F2%2F5P-003247?style=for-the-badge" alt="ESA Sentinel" loading="lazy">
+  <img src="https://img.shields.io/badge/USGS-Landsat%207%2F8%2F9-006633?style=for-the-badge" alt="USGS Landsat" loading="lazy">
 </div>
 
 </div>
 
-> :red_circle: **Note:** This profile is prepared using publicly available information from the
-> literature and reflects concepts I have learned during my professional experience. It does **not**
-> include any proprietary or confidential information.
+<blockquote class="note-callout">
+  <p>🔴 <strong>Note:</strong> This profile is prepared using publicly available information from the
+  literature and reflects concepts I have learned during my professional experience. It does <strong>not</strong>
+  include any proprietary or confidential information.</p>
+</blockquote>
 
-### Mission Patches
+<h2 class="section-heading">Mission Patches</h2>
 
 <div class="mission-patches">
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" alt="Connecta T1.1">
@@ -45,17 +53,17 @@ description: Satellite Image Processing & Cal/Val Engineer · Remote Sensing Eng
 
 ---
 
-## Projects
+<h2 class="section-heading">Projects</h2>
 
-Open-source Earth-observation software — MSI/SAR ground-segment processors, synthetic raw generation, and ML embeddings. All developed under a tailored **ECSS-E-ST-40C** lifecycle.
+<p class="section-lead">Open-source Earth-observation software — MSI/SAR ground-segment processors, synthetic raw generation, and ML embeddings. All developed under a tailored <strong>ECSS-E-ST-40C</strong> lifecycle.</p>
 
 {% include project-cards.html %}
 
-<p style="text-align: left;"><a href="{{ site.baseurl }}/projects/">View all projects →</a></p>
+<p class="section-link"><a href="{{ site.baseurl }}/projects/">View all projects →</a></p>
 
 ---
 
-## Skills at a glance
+<h2 class="section-heading">Skills at a glance</h2>
 
 <div class="skills-grid">
   <div class="skill-block">
@@ -76,14 +84,12 @@ Open-source Earth-observation software — MSI/SAR ground-segment processors, sy
   </div>
 </div>
 
-Full skills list and technical Cal/Val depth on the **[Experience]({{ site.baseurl }}/experience.html)** page.
+<p class="section-lead">Full skills list and technical Cal/Val depth on the <a href="{{ site.baseurl }}/experience.html"><strong>Experience</strong></a> page.</p>
 
 ---
 
-<h2 id="contact">:beer: Goofing Around Berlin</h2>
+<h2 class="section-heading" id="contact">🍺 Goofing Around Berlin</h2>
 
-I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to
-grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics,
-parallel universes, or Laika the dog — feel free to get in touch! :sunglasses:
+<p class="section-lead">I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog — feel free to get in touch! 😎</p>
 
-**Find me:** [LinkedIn](https://www.linkedin.com/in/candenizkaya/) · [Email](mailto:candenizkaya17@gmail.com) · [GitHub](https://github.com/AstroCan17) · Berlin
+<p class="contact-line"><strong>Find me:</strong> <a href="https://www.linkedin.com/in/candenizkaya/">LinkedIn</a> · <a href="mailto:candenizkaya17@gmail.com">Email</a> · <a href="https://github.com/AstroCan17">GitHub</a> · Berlin</p>

@@ -1,0 +1,7 @@
+title: AstroCan17
+description: Satellite Image Processing & Cal/Val Engineer · Remote Sensing Engineer
+baseurl: "/AstroCan17"
+url: "https://astrocan17.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM

@@ -22,7 +22,7 @@
 
 - slug: s2-msi-raw-generator
   title: Sentinel-2 MSI Synthetic Raw Data Generator
-  pitch: L1B to L0 reverse radiometric ladder — reconstructs raw DN and validates against Reference S2 L0 to within ~4 DN.
+  pitch: S2 L1B → Synthetic L0 reverse radiometric chain — validates against reference ESA L0 to ≤ ~4 DN.
   status: Deployed
   status_class: deployed
   tags: [Python, Sentinel-2, CCSDS-122, ECSS, Cal/Val]

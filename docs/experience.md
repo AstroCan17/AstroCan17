@@ -24,7 +24,7 @@ interface control, and IV&V. Designed and developed **L0–L2 payload data proce
 system-level sizing and trade-offs (throughput, latency, compute capacity), and implemented
 containerized pipelines using Docker and Kubernetes. Deep mastery of the radiometric chain, proven by
 building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-source
-[s2-msi-raw-generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) project.
+[Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) project.
 
 <div class="hero-cta">
   <a class="btn btn-primary" href="{{ site.baseurl }}/projects/">View projects</a>
@@ -43,7 +43,7 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
       <li>Developed satellite ground segment data processor pipeline (L0–L2) and AI/ML pipeline for CNNs and Spiking Neural Networks (SNNs).</li>
       <li>Integrated CNNs and SNNs into YOLO framework for EO data processing — end-to-end AI-based chain for small ground-target detection on HR imagery.</li>
       <li>Led technical planning: data volumes, throughput, latency, GPU/memory trade-offs; defined QA/QC and traceability for AI outputs.</li>
-      <li>Open-source portfolio: <a href="{{ site.baseurl }}/projects/s2-msi-raw-generator.html">s2-msi-raw-generator</a>, <a href="{{ site.baseurl }}/projects/msi-processor.html">msi-processor</a>, <a href="{{ site.baseurl }}/projects/sar-processor.html">sar-processor</a>, <a href="{{ site.baseurl }}/projects/eo-data-embedding.html">eo-data-embedding</a> (<a href="{{ site.baseurl }}/projects/ipf-ecosystem.html">IPF ecosystem</a>).</li>
+      <li>Open-source portfolio: <a href="{{ site.baseurl }}/projects/s2-msi-raw-generator.html">Sentinel-2 MSI Synthetic Raw Data Generator</a>, <a href="{{ site.baseurl }}/projects/msi-processor.html">msi-processor</a>, <a href="{{ site.baseurl }}/projects/sar-processor.html">sar-processor</a>, <a href="{{ site.baseurl }}/projects/eo-data-embedding.html">eo-data-embedding</a> (<a href="{{ site.baseurl }}/projects/ipf-ecosystem.html">IPF ecosystem</a>).</li>
     </ul>
   </div>
   <div class="timeline-item">

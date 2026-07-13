@@ -50,9 +50,9 @@ flowchart TD
 - **Atmospheric** — 6S TOA → BOA inversion with spectral-threshold scene classification and cloud/shadow masks.
 - Single pipeline driver (`scripts/run_pipeline.py`) with phase-structured, idempotent execution over a shared data-store.
 
-## Results — ReferenceL0→L1B run
+## Results — Synthetic L0→L1B run
 
-Output of a Reference**L0→L1B** end-to-end run (`l0_decode → radiometric → enhancement → toa`, `nominal` mode): a persisted **L1B TOA-reflectance** EOPF product from the synthetic raw generator's open-container L0 + cal-DB ADFs.
+Output of a **L0→L1B** end-to-end run (`l0_decode → radiometric → enhancement → toa`, `nominal` mode): a persisted **L1B TOA-reflectance** EOPF product from the synthetic raw generator's open-container **Synthetic L0** + cal-DB ADFs.
 
 | Band | mean (refl.) | std | SNR (dB) |
 |------|-------------|-----|----------|
@@ -63,14 +63,14 @@ Output of a Reference**L0→L1B** end-to-end run (`l0_decode → radiometric →
 | B11 | 0.0434 | 0.0017 | 28.3 |
 | B12 | 0.0535 | 0.0019 | 28.8 |
 
-A second E2E result — Reference-L1A **bit-identity** through `l0_decode` (L1A′ ≡ L1A, 13/13 bands) — is documented in the generator's validation pages.
+A second E2E result — **L1A bit-identity** through `l0_decode` (L1A′ ≡ L1A, 13/13 bands) — is documented in the generator's validation pages.
 
 Reproduce: `python scripts/run_pipeline.py <store>` with phases `fetch-store → l0-decode → radiometric → enhancement → toa → stats → report`.
 
 ## Links
 
 - [GitHub repository](https://github.com/AstroCan17/msi-processor)
-- [s2-msi-raw-generator validation](https://astrocan17.github.io/s2-msi-raw-generator/) (producer inputs)
+- [Sentinel-2 MSI Synthetic Raw Data Generator validation](https://astrocan17.github.io/s2-msi-raw-generator/) (producer inputs)
 - [IPF ecosystem case study]({{ site.baseurl }}/projects/ipf-ecosystem.html)
 
 [← All projects]({{ site.baseurl }}/projects/)

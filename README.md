@@ -85,11 +85,3 @@ Sensor-agnostic SAR forward processor on EOPF; Sentinel-1 C-SAR reference profil
 - **Domains:** AOCS · System Engineering · Optical Design · Optoelectronics · Mission Planning
 
 :microscope: Cal/Val depth, on-orbit NUC/MTF, and L0–L2 pipeline detail on the **[Experience page](https://astrocan17.github.io/AstroCan17/experience.html)**.
-
----
-
-## :beer: Goofing Around Berlin
-
-I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to
-grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics,
-parallel universes, or Laika the dog — feel free to get in touch! :sunglasses:

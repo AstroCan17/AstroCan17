@@ -99,8 +99,6 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
 
 ---
 
-<h2 class="section-heading" id="contact">🍺 Goofing Around Berlin</h2>
-
-<p class="section-lead">I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog — feel free to get in touch! 😎</p>
+<h2 class="section-heading" id="contact">Contact</h2>
 
 <p class="contact-line"><strong>Find me:</strong> <a href="https://www.linkedin.com/in/candenizkaya/">LinkedIn</a> · <a href="mailto:candenizkaya17@gmail.com">Email</a> · <a href="https://github.com/AstroCan17">GitHub</a> · Berlin</p>

@@ -413,10 +413,30 @@
       padding-bottom: 0.35rem;
     }
     .project-group-heading:first-of-type { margin-top: 1.5rem; }
+    .docs-nav-heading {
+      margin: 1.25rem 0 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .docs-nav-links {
+      margin: 0 0 0.5rem;
+      padding-left: 1.25rem;
+      columns: 2;
+      column-gap: 2rem;
+    }
+    .docs-nav-links li {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+      break-inside: avoid;
+    }
     @media (max-width: 600px) {
       .site-main { padding: 1.25rem 1rem 2rem; }
       .figure-pair img { max-width: 100%; }
       .competency-nav { grid-template-columns: 1fr; }
+      .docs-nav-links { columns: 1; }
     }
   </style>
   {% if page.math %}

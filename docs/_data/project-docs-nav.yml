@@ -1,0 +1,136 @@
+msi-processor:
+  base: https://astrocan17.github.io/msi-processor/
+  sections:
+    - title: User documentation
+      links:
+        - { label: Pipeline driver, path: pipeline.html }
+        - { label: Results, path: results.html }
+        - { label: Software installation manual, path: sim.html }
+        - { label: Software user manual / Guidelines, path: sum/index.html }
+        - { label: API Reference, path: api/msi_processor.html }
+        - { label: Software Release Note (SRN), path: compliance/srn-software-release-note.html }
+        - { label: Contributing, path: contributing.html }
+        - { label: License, path: license.html }
+    - title: ECSS technical specification & design
+      links:
+        - { label: Software System Specification (SSS), path: compliance/sss-software-system-specification.html }
+        - { label: Software Interface Requirements Document (IRD), path: compliance/ird-interface-requirements.html }
+        - { label: Software Requirements Specification (SRS), path: compliance/srs-software-requirements.html }
+        - { label: Algorithm Theoretical Basis Document (ATBD), path: compliance/atbd-algorithm-theoretical-basis.html }
+        - { label: Software Design Document (SDD), path: compliance/sdd-software-design.html }
+        - { label: Design Justification File (DJF), path: compliance/djf-design-justification.html }
+        - { label: Data Processing Model (DPM), path: compliance/dpm-data-processing-model.html }
+        - { label: Interface Control Document (ICD), path: compliance/icd-interface-control.html }
+        - { label: Configuration Item Data List (CIDL), path: compliance/cidl-configuration-item-data-list.html }
+        - { label: Software Configuration File (SCF), path: compliance/scf-software-configuration-file.html }
+        - { label: Software Reuse File (SRF), path: compliance/srf-software-reuse-file.html }
+    - title: ECSS verification, validation & reviews
+      links:
+        - { label: Software Verification & Validation Plan (V&V Plan), path: compliance/vv-plan.html }
+        - { label: Software Unit & Integration Test Plan (SUITP), path: compliance/suitp-unit-integration-test-plan.html }
+        - { label: Software Verification Report (SVR), path: compliance/vv-report.html }
+        - { label: Software Unit & Integration Test Report (SUITR), path: compliance/suitr-unit-integration-test-report.html }
+        - { label: Live CI test report (SUITR annex), path: suitr.html }
+        - { label: Requirements Traceability Matrix (RTM), path: compliance/traceability-matrix.html }
+        - { label: Qualification Review (QR) Report, path: compliance/qr-qualification-review-report.html }
+    - title: ECSS management & assurance
+      links:
+        - { label: Software Development Plan (SDP), path: compliance/software-development-plan.html }
+        - { label: Software Product Assurance Plan (SPAP), path: compliance/spa-plan.html }
+        - { label: Software Review Plan (SRevP), path: compliance/srevp-software-review-plan.html }
+        - { label: Risk Register, path: compliance/risk-register.html }
+
+s2-msi-raw-generator:
+  base: https://astrocan17.github.io/s2-msi-raw-generator/
+  sections:
+    - title: Project documentation
+      links:
+        - { label: Algorithm Theoretical Basis Document (ATBD), path: atbd/atbd.html }
+        - { label: Software System Specification (SSS), path: sss.html }
+        - { label: Software Requirements Specification (SRS), path: srs.html }
+        - { label: Interface Requirements Document (IRD), path: ird.html }
+        - { label: Software Design Document, path: sdd/index.html }
+        - { label: Design Justification File (DJF), path: djf.html }
+        - { label: Interface control document, path: icd.html }
+        - { label: Data Processing Model, path: dpm/index.html }
+        - { label: Verification & validation, path: vv/index.html }
+        - { label: S2 L1B validation (REQ-FUNC-093), path: vv/s2_l1b_e2e.html }
+        - { label: Reverse-chain E2E run report, path: vv/s2_l1b_e2e_run_report.html }
+        - { label: Configuration item data list, path: cidl.html }
+        - { label: Software configuration file, path: scf.html }
+        - { label: Software reuse file, path: srf.html }
+    - title: Management & assurance
+      links:
+        - { label: Software development plan, path: sdp.html }
+        - { label: Software Product Assurance Plan (SPAP), path: spa-plan.html }
+        - { label: Software Review Plan (SRevP), path: srevp.html }
+        - { label: Risk register, path: risk-register.html }
+        - { label: Qualification Review (QR) report, path: qr.html }
+    - title: User documentation
+      links:
+        - { label: Software user manual, path: sum.html }
+        - { label: Software release note, path: srn.html }
+        - { label: API Reference, path: api/s2_msi_raw_generator.html }
+        - { label: License, path: license.html }
+
+sar-processor:
+  base: https://astrocan17.github.io/sar-processor/
+  sections:
+    - title: User documentation
+      links:
+        - { label: Processing pipeline, path: pipeline.html }
+        - { label: Software installation manual, path: sim.html }
+        - { label: Software user manual / Guidelines, path: sum/index.html }
+        - { label: API Reference, path: api/sar_processor.html }
+        - { label: Software Release Note (SRN), path: compliance/srn-software-release-note.html }
+        - { label: Contributing, path: contributing.html }
+        - { label: License, path: license.html }
+    - title: ECSS technical specification & design
+      links:
+        - { label: Software System Specification (SSS), path: compliance/sss-software-system-specification.html }
+        - { label: Software Interface Requirements Document (IRD), path: compliance/ird-interface-requirements.html }
+        - { label: Software Requirements Specification (SRS), path: compliance/srs-software-requirements.html }
+        - { label: Algorithm Theoretical Basis Document (ATBD), path: compliance/atbd-algorithm-theoretical-basis.html }
+        - { label: Software Design Document (SDD), path: compliance/sdd-software-design.html }
+        - { label: Design Justification File (DJF), path: compliance/djf-design-justification.html }
+        - { label: Data Processing Model (DPM), path: compliance/dpm-data-processing-model.html }
+        - { label: Interface Control Document (ICD), path: compliance/icd-interface-control.html }
+        - { label: Configuration Item Data List (CIDL), path: compliance/cidl-configuration-item-data-list.html }
+        - { label: Software Configuration File (SCF), path: compliance/scf-software-configuration-file.html }
+        - { label: Software Reuse File (SRF), path: compliance/srf-software-reuse-file.html }
+    - title: ECSS verification, validation & reviews
+      links:
+        - { label: Software Verification & Validation Plan (V&V Plan), path: compliance/vv-plan.html }
+        - { label: Software Unit & Integration Test Plan (SUITP), path: compliance/suitp-unit-integration-test-plan.html }
+        - { label: Software Verification Report (SVR), path: compliance/vv-report.html }
+        - { label: Software Unit & Integration Test Report (SUITR), path: compliance/suitr-unit-integration-test-report.html }
+        - { label: Live CI test report (SUITR annex), path: suitr.html }
+        - { label: Traceability Matrix, path: compliance/traceability-matrix.html }
+        - { label: Qualification Review (QR) Report, path: compliance/qr-qualification-review-report.html }
+    - title: ECSS management & assurance
+      links:
+        - { label: Software Development Plan (SDP), path: compliance/software-development-plan.html }
+        - { label: Software Product Assurance Plan (SPAP), path: compliance/spa-plan.html }
+        - { label: Software Review Plan (SRevP), path: compliance/srevp-software-review-plan.html }
+        - { label: Risk Register, path: compliance/risk-register.html }
+
+eo-data-embedding:
+  base: https://astrocan17.github.io/eo-data-embedding/
+  sections:
+    - title: User documentation
+      links:
+        - { label: Software installation manual, path: sim.html }
+        - { label: Software user manual / Guidelines, path: sum/index.html }
+        - { label: API Reference, path: api/eo_data_embedding.html }
+        - { label: Software release note, path: srn.html }
+        - { label: Contributing, path: contributing.html }
+        - { label: License, path: license.html }
+    - title: Project documentation
+      links:
+        - { label: Software design document, path: sdd/index.html }
+        - { label: Detailed processing model, path: dpm/index.html }
+        - { label: Interface control document, path: icd.html }
+        - { label: Software reuse file, path: srf.html }
+        - { label: Software unit and integration test report, path: suitr.html }
+        - { label: Configuration item data list, path: cidl.html }
+        - { label: Software configuration file, path: scf.html }

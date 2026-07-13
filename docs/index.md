@@ -52,7 +52,7 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T3.1%20%26%20T3.2%20ISL%20Twin%20Cubesats%20Mission%20Patch.jpg" alt="Connecta T3.1 & T3.2">
 </div>
 
-<p class="section-lead"><a href="{{ site.baseurl }}/experience.html#mission-registry">{% include mission-count.html %} missions</a> across Phase 0–E — see the full registry on the Experience page.</p>
+<p class="section-lead">{% include mission-count.html %} satellite missions across Phase 0–E.</p>
 
 ---
 

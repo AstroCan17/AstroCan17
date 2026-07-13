@@ -78,7 +78,7 @@ flowchart LR
 4. **Bit-identity check** — L1A′ ≡ L1A through `l0_decode` on all 13 bands.
 5. **Calibration cross-validation** — `--mode calibration` derives NUC from dark+flatfield and cross-validates against producer-derived coefficients.
 
-## Component case studies
+## Component overviews
 
 - [Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) — producer, S2 L1B → Synthetic L0 reverse chain
 - [msi-processor]({{ site.baseurl }}/projects/msi-processor.html) — consumer, L0→L2 forward chain

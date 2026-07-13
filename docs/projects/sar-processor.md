@@ -86,9 +86,10 @@ Current code under these paths is **scaffold placeholders** until WP-5 (post-CDR
 
 - [GitHub repository](https://github.com/AstroCan17/sar-processor)
 - [Documentation site](https://astrocan17.github.io/sar-processor/)
-- [Software Development Plan](https://github.com/AstroCan17/sar-processor/blob/main/compliance/software-development-plan.md)
-- [SSS (system requirements)](https://github.com/AstroCan17/sar-processor/blob/main/compliance/drd/sss-software-system-specification.md)
-- [IRD (interface requirements)](https://github.com/AstroCan17/sar-processor/blob/main/compliance/drd/ird-interface-requirements.md)
 - [msi-processor (sibling)]({{ site.baseurl }}/projects/msi-processor.html)
+
+### Documentation (GitHub Pages)
+
+{% include project-docs-links.html slug="sar-processor" %}
 
 [← All projects]({{ site.baseurl }}/projects/)

@@ -80,7 +80,10 @@ All **ten 10 m + 20 m bands agree to ≤ ~4 DN**. Native-60 m bands (B01/B09/B10
 
 - [GitHub repository](https://github.com/AstroCan17/s2-msi-raw-generator)
 - [Documentation site](https://astrocan17.github.io/s2-msi-raw-generator/)
-- [S2 L1B E2E validation](https://astrocan17.github.io/s2-msi-raw-generator/vv/s2_l1b_e2e.html)
 - [msi-processor (consumer)]({{ site.baseurl }}/projects/msi-processor.html)
+
+### Documentation (GitHub Pages)
+
+{% include project-docs-links.html slug="s2-msi-raw-generator" %}
 
 [← All projects]({{ site.baseurl }}/projects/)

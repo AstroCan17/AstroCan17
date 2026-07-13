@@ -65,7 +65,9 @@ Key properties:
 
 - [GitHub repository](https://github.com/AstroCan17/eo-data-embedding)
 - [Documentation site](https://astrocan17.github.io/eo-data-embedding/)
-- [V&V report](https://github.com/AstroCan17/eo-data-embedding/blob/main/compliance/drd/vv-report.md)
-- [ECSS compliance tree](https://github.com/AstroCan17/eo-data-embedding/tree/main/compliance)
+
+### Documentation (GitHub Pages)
+
+{% include project-docs-links.html slug="eo-data-embedding" %}
 
 [← All projects]({{ site.baseurl }}/projects/)

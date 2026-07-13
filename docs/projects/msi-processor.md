@@ -70,7 +70,12 @@ Reproduce: `python scripts/run_pipeline.py <store>` with phases `fetch-store →
 ## Links
 
 - [GitHub repository](https://github.com/AstroCan17/msi-processor)
-- [Sentinel-2 MSI Synthetic Raw Data Generator validation](https://astrocan17.github.io/s2-msi-raw-generator/) (producer inputs)
-- [IPF ecosystem case study]({{ site.baseurl }}/projects/ipf-ecosystem.html)
+- [Documentation site](https://astrocan17.github.io/msi-processor/)
+- [Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) (producer inputs)
+- [IPF ecosystem overview]({{ site.baseurl }}/projects/ipf-ecosystem.html)
+
+### Documentation (GitHub Pages)
+
+{% include project-docs-links.html slug="msi-processor" %}
 
 [← All projects]({{ site.baseurl }}/projects/)

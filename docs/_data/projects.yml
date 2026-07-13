@@ -29,7 +29,7 @@
   status_class: completed
   tags: [Python, EOPF, GDAL, ECSS, MSI]
   repo: https://github.com/AstroCan17/msi-processor
-  docs: null
+  docs: https://astrocan17.github.io/msi-processor/
   image: assets/projects/l1b_rgb.png
   featured: true
   group: processors

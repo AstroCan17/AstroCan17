@@ -50,25 +50,25 @@
 
 Embed Sentinel-1/2 imagery **once** with a frozen **Clay v1.5** ViT; similarity search, few-shot classification, and change detection over stored vectors — CPU-only demo included.
 
-:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/eo-data-embedding.html) · :link: [Repository](https://github.com/AstroCan17/eo-data-embedding) · :books: [Docs](https://astrocan17.github.io/eo-data-embedding/)
+:page_facing_up: [Overview](https://astrocan17.github.io/AstroCan17/projects/eo-data-embedding.html) · :link: [Repository](https://github.com/AstroCan17/eo-data-embedding) · :books: [Docs](https://astrocan17.github.io/eo-data-embedding/)
 
 ### [msi-processor](https://github.com/AstroCan17/msi-processor) — pushbroom MSI ground-segment L0→L2
 
 Generic MSI processor on EOPF CPM — eight processing units (l0_decode → radiometric → enhancement → toa → coregister → georeference → atmospheric → pansharpen), ECSS Cat-C, CI-green.
 
-:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/msi-processor.html) · :link: [Repository](https://github.com/AstroCan17/msi-processor)
+:page_facing_up: [Overview](https://astrocan17.github.io/AstroCan17/projects/msi-processor.html) · :link: [Repository](https://github.com/AstroCan17/msi-processor) · :books: [Docs](https://astrocan17.github.io/msi-processor/)
 
 ### [s2-msi-raw-generator](https://github.com/AstroCan17/s2-msi-raw-generator) — Sentinel-2 MSI Synthetic Raw Data Generator
 
 Runs **S2B L1B** backwards through the operational radiometric chain; validates **Synthetic L0** against reference ESA L0 to **≤ ~4 DN** on 10/20 m bands.
 
-:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/s2-msi-raw-generator.html) · :link: [Repository](https://github.com/AstroCan17/s2-msi-raw-generator) · :books: [Docs](https://astrocan17.github.io/s2-msi-raw-generator/)
+:page_facing_up: [Overview](https://astrocan17.github.io/AstroCan17/projects/s2-msi-raw-generator.html) · :link: [Repository](https://github.com/AstroCan17/s2-msi-raw-generator) · :books: [Docs](https://astrocan17.github.io/s2-msi-raw-generator/)
 
 ### [sar-processor](https://github.com/AstroCan17/sar-processor) — spaceborne SAR L0→SLC→GRD
 
 Sensor-agnostic SAR forward processor on EOPF; Sentinel-1 C-SAR reference profile; ECSS skeleton (pre-SRR).
 
-:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/sar-processor.html) · :link: [Repository](https://github.com/AstroCan17/sar-processor)
+:page_facing_up: [Overview](https://astrocan17.github.io/AstroCan17/projects/sar-processor.html) · :link: [Repository](https://github.com/AstroCan17/sar-processor) · :books: [Docs](https://astrocan17.github.io/sar-processor/)
 
 :link: [IPF ecosystem overview](https://astrocan17.github.io/AstroCan17/projects/ipf-ecosystem.html) — how generator, processor, and data-store connect.
 

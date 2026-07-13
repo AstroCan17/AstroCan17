@@ -1,0 +1,11 @@
+{% assign nav = site.data.project-docs-nav[include.slug] %}
+{% if nav %}
+{% for section in nav.sections %}
+<h4 class="docs-nav-heading">{{ section.title }}</h4>
+<ul class="docs-nav-links">
+  {% for link in section.links %}
+  <li><a href="{{ nav.base }}{{ link.path }}">{{ link.label }}</a></li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% endif %}

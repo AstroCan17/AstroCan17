@@ -83,7 +83,7 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
     <p class="timeline-org">Plan-S Satellite and Space</p>
     <ul>
       <li>Designed end-to-end containerized L0–L2 ground segment pipeline with GPU-accelerated band processing, automated QA/QC, metadata generation, and full product lineage tracking.</li>
-      <li>Ground segment support across <strong>12 CubeSat missions</strong> — lab calibration, on-orbit commissioning, routine performance monitoring (<a href="#mission-registry">mission registry</a>).</li>
+      <li>Ground segment support across <strong>12 CubeSat missions</strong> — lab calibration, on-orbit commissioning, routine performance monitoring.</li>
       <li><strong>CONNECTA T2.1</strong> (3.25 m GSD): full multispectral CubeSat lifecycle; L0–L2 processor (NUC, MTF, denoising, georeferencing, atmospheric correction).</li>
       <li><strong>CONNECTA T3.1 &amp; T3.2:</strong> lab Cal/Val of COTS SWIR camera for twin ISL CubeSats.</li>
       <li>Built operator-facing Qt GUI and CLI/API; Docker-containerized execution, versioned YAML/JSON config, automated PDF Data Quality Reports.</li>
@@ -266,14 +266,6 @@ Operator-facing **Qt GUI and CLI/API**; Docker-containerized execution; versione
 automated PDF Data Quality Reports.
 
 Related open-source work: [msi-processor]({{ site.baseurl }}/projects/msi-processor.html) · [Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) · [IPF ecosystem]({{ site.baseurl }}/projects/ipf-ecosystem.html)
-
----
-
-## Mission registry {#mission-registry}
-
-{% include mission-count.html %} satellite missions across Phase 0–E — public missions named below; confidential programmes listed without proprietary detail.
-
-{% include missions-grid.html %}
 
 ---
 

@@ -4,10 +4,10 @@ title: msi-processor
 description: Generic pushbroom MSI ground-segment processor L0 to L2 on EOPF Core Python Modules.
 ---
 
-# msi-processor
+# Sentinel-2 MSI Payload Data Ground Segment Processor
 
 <div class="case-study-meta">
-  <span><strong>Status:</strong> CI-green · all eight units implemented</span>
+  <span><strong>Status:</strong> Completed </span>
   <span><strong>Stack:</strong> Python · EOPF CPM 2.8.1 · Zarr · GDAL</span>
   <span><strong>Lifecycle:</strong> ECSS-E-ST-40C Category C</span>
 </div>
@@ -16,7 +16,7 @@ description: Generic pushbroom MSI ground-segment processor L0 to L2 on EOPF Cor
 
 ## Overview
 
-**msi-processor** is a generic high-resolution pushbroom multispectral imager (MSI) ground-segment data processor that turns downlinked raw Level-0 instrument data into calibrated, geophysically usable products up to Level 2. It is built on the ESA EOPF Core Python Modules (`eopf == 2.8.1`, Zarr output) and developed under an ECSS-E-ST-40C Rev.1 documentation-first software lifecycle.
+**msi-processor** is a generic high-resolution pushbroom multispectral imager (MSI) ground-segment data processor that process downlinked raw Level-0 instrument data into calibrated, geophysically usable products up to Level 2. It is built on the ESA EOPF Core Python Modules (`eopf == 2.8.1`, Zarr output) and developed under an ECSS-E-ST-40C Rev.1 documentation-first software lifecycle.
 
 Each processing stage is an EOPF `EOProcessingUnit`: it consumes the previous unit's product under a named input key, takes Auxiliary Data Files (ADFs) as run inputs, and emits its product under a named output key.
 
@@ -50,9 +50,9 @@ flowchart TD
 - **Atmospheric** — 6S TOA → BOA inversion with spectral-threshold scene classification and cloud/shadow masks.
 - Single pipeline driver (`scripts/run_pipeline.py`) with phase-structured, idempotent execution over a shared data-store.
 
-## Results — real L0→L1B run
+## Results — ReferenceL0→L1B run
 
-Output of a real **L0→L1B** end-to-end run (`l0_decode → radiometric → enhancement → toa`, `nominal` mode): a persisted **L1B TOA-reflectance** EOPF product from the synthetic raw generator's open-container L0 + cal-DB ADFs.
+Output of a Reference**L0→L1B** end-to-end run (`l0_decode → radiometric → enhancement → toa`, `nominal` mode): a persisted **L1B TOA-reflectance** EOPF product from the synthetic raw generator's open-container L0 + cal-DB ADFs.
 
 | Band | mean (refl.) | std | SNR (dB) |
 |------|-------------|-----|----------|
@@ -63,7 +63,7 @@ Output of a real **L0→L1B** end-to-end run (`l0_decode → radiometric → enh
 | B11 | 0.0434 | 0.0017 | 28.3 |
 | B12 | 0.0535 | 0.0019 | 28.8 |
 
-A second E2E result — real-L1A **bit-identity** through `l0_decode` (L1A′ ≡ L1A, 13/13 bands) — is documented in the generator's validation pages.
+A second E2E result — Reference-L1A **bit-identity** through `l0_decode` (L1A′ ≡ L1A, 13/13 bands) — is documented in the generator's validation pages.
 
 Reproduce: `python scripts/run_pipeline.py <store>` with phases `fetch-store → l0-decode → radiometric → enhancement → toa → stats → report`.
 

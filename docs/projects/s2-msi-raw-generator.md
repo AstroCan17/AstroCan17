@@ -1,20 +1,20 @@
 ---
 layout: default
 title: s2-msi-raw-generator
-description: Sentinel-2 MSI L1B to L0 reverse radiometric ladder with real ESA L0 validation.
+description: Sentinel-2 MSI L1B to L0 reverse radiometric ladder with Reference S2 L0 validation.
 ---
 
-# s2-msi-raw-generator
+# Sentinel-2 MSI Synthetic Raw Data Generator
 
 <div class="case-study-meta">
-  <span><strong>Status:</strong> Production · real-data validated</span>
+  <span><strong>Status:</strong> Deployed </span>
   <span><strong>Stack:</strong> Python 3.11 · NumPy · Zarr · CCSDS-122</span>
   <span><strong>Reference:</strong> Sentinel-2 L1 ATBD (public)</span>
 </div>
 
 ## Overview
 
-**s2-msi-raw-generator** runs a real Sentinel-2B L1B backwards through the **exact inverse of the operational L0→L1B radiometric chain** to reconstruct the full EOPF product ladder — **L1A → L0plus (CCSDS-122 ISP) → L0** (focal-plane DN `img`, 12 detectors × 13 bands). The reconstructed L0 is validated directly against the **real ESA L0 `img`**, agreeing to **≤ ~4 DN on the ten 10 m + 20 m bands**.
+**s2-msi-raw-generator** runs a ReferenceSentinel-2B L1B backwards through the **exact inverse of the operational L0→L1B radiometric chain** to reconstruct the full EOPF product ladder — **L1A → L0plus (CCSDS-122 ISP) → L0** (focal-plane DN `img`, 12 detectors × 13 bands). The reconstructed L0 is validated directly against the **Reference S2 L0 `img`**, agreeing to **≤ ~4 DN on the ten 10 m + 20 m bands**.
 
 The inversion undoes every ON forward step — radiometric offset, relative-response/PRNU, dark, un-bin, SWIR re-arrangement, defective pixels, crosstalk, on-board equalization. MTF-deconvolution is OFF in the operational chain, so PSF re-blur and noise are **not** re-applied. Built from the public L1 ATBD — no external processor.
 
@@ -22,7 +22,7 @@ The inversion undoes every ON forward step — radiometric offset, relative-resp
 
 ```mermaid
 flowchart LR
-    IN[("Real S2B L1B")]
+    IN[("ReferenceS2B L1B")]
     subgraph GEN["s2_msi_raw_generator"]
         REV["reverse_l1b_to_l0"]
         L1A["write L1A"]
@@ -32,7 +32,7 @@ flowchart LR
     end
     L0plus[("L0plus compressed ISPs")]
     L0[("L0 decoded img")]
-    REALL0[("real ESA L0 img")]
+    REALL0[("Reference S2 L0 img")]
     CALDB[("cal-DB EOPF ADFs")]
     VAL["validate: ≤ ~4 DN"]
     IN --> REV --> L1A --> C122 --> PKT
@@ -75,7 +75,7 @@ All **ten 10 m + 20 m bands agree to ≤ ~4 DN**. Native-60 m bands (B01/B09/B10
 
 - [GitHub repository](https://github.com/AstroCan17/s2-msi-raw-generator)
 - [Documentation site](https://astrocan17.github.io/s2-msi-raw-generator/)
-- [Real E2E validation](https://astrocan17.github.io/s2-msi-raw-generator/vv/real_e2e.html)
+- [ReferenceE2E validation](https://astrocan17.github.io/s2-msi-raw-generator/vv/real_e2e.html)
 - [msi-processor (consumer)]({{ site.baseurl }}/projects/msi-processor.html)
 
 [← All projects]({{ site.baseurl }}/projects/)

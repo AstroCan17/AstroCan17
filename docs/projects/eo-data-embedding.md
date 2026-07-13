@@ -7,7 +7,7 @@ description: Multi-modal geospatial embedding search and change detection on a f
 # eo-data-embedding
 
 <div class="case-study-meta">
-  <span><strong>Status:</strong> Production · CI-green</span>
+  <span><strong>Status:</strong> Released </span>
   <span><strong>Stack:</strong> Python 3.11 · PyTorch · Clay v1.5 · FAISS · Gradio</span>
   <span><strong>Lifecycle:</strong> ECSS-E-ST-40C tailored</span>
 </div>

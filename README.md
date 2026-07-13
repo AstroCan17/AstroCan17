@@ -60,7 +60,7 @@ Generic MSI processor on EOPF CPM — eight processing units (l0_decode → radi
 
 ### [s2-msi-raw-generator](https://github.com/AstroCan17/s2-msi-raw-generator) — Sentinel-2 L1B→L0 reverse ladder
 
-Runs real S2B L1B backwards through the operational radiometric chain; validates reconstructed L0 against real ESA L0 to **≤ ~4 DN** on 10/20 m bands.
+Runs ReferenceS2B L1B backwards through the operational radiometric chain; validates reconstructed L0 against Reference S2 L0 to **≤ ~4 DN** on 10/20 m bands.
 
 :page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/s2-msi-raw-generator.html) · :link: [Repository](https://github.com/AstroCan17/s2-msi-raw-generator) · :books: [Docs](https://astrocan17.github.io/s2-msi-raw-generator/)
 

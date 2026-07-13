@@ -14,7 +14,7 @@ description: Producer–consumer architecture for the Instrument Processing Faci
 
 ## Overview
 
-The **Instrument Processing Facility (IPF)** prototype ties three open-source projects into a single validated ground-segment workflow. A **producer** (`s2-msi-raw-generator`) synthesises realistic L0 raw data and a calibration database from real Sentinel-2 L1B inputs; a **consumer** (`msi-processor`) runs the forward L0→L2 chain on those products; and a **data-store** registry provides versioned, sha256-verified package exchange between them.
+The **Instrument Processing Facility (IPF)** prototype ties three open-source projects into a single validated ground-segment workflow. A **producer** (`s2-msi-raw-generator`) synthesises realistic L0 raw data and a calibration database from ReferenceSentinel-2 L1B inputs; a **consumer** (`msi-processor`) runs the forward L0→L2 chain on those products; and a **data-store** registry provides versioned, sha256-verified package exchange between them.
 
 This architecture enables **non-tautological validation**: calibration coefficients are derived (diffuser + dark), not copied from a truth ADF, so the processor round-trip genuinely tests the chain.
 
@@ -41,7 +41,7 @@ flowchart LR
             CALDB[("cal-DB EOPF ADFs")]
             L0oc[("open-container L0")]
             L0c[("canonical L0 ISPs")]
-            IN[("Real S2 L1A/L1B")]
+            IN[("ReferenceS2 L1A/L1B")]
             ADFsrc[("ADF sources GIPP PSF SRF")]
             L1[("L1B / L1C product")]
         end
@@ -72,7 +72,7 @@ flowchart LR
 
 ## Validation story
 
-1. **Producer reverse ladder** — real S2B L1B → synthetic L0 `img`; validated against real ESA L0 to ≤ ~4 DN on 10/20 m bands.
+1. **Producer reverse ladder** — ReferenceS2B L1B → synthetic L0 `img`; validated against Reference S2 L0 to ≤ ~4 DN on 10/20 m bands.
 2. **L0plus codec** — `decode(L0plus) == L1A` bit-exact; lossless ratio 3.66×.
 3. **Consumer forward chain** — `l0_decode → radiometric → enhancement → toa` produces L1B TOA-reflectance from producer's open-container L0 + cal-DB.
 4. **Bit-identity check** — L1A′ ≡ L1A through `l0_decode` on all 13 bands.

@@ -12,7 +12,7 @@ description: Sentinel-2 MSI L1B to L0 reverse radiometric ladder with Reference 
   <span><strong>Reference:</strong> Sentinel-2 L1 ATBD (public)</span>
 </div>
 
-![Generated Synthetic Raw Data]({{ site.baseurl }}assets/projects/reverse_l1b_allbands.png)
+![Generated Synthetic Raw Data]({{ site.baseurl }}/assets/projects/reverse_l1b_allbands.png)
 
 ## Overview
 

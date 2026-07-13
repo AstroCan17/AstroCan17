@@ -1,8 +1,8 @@
 - slug: eo-data-embedding
   title: eo-data-embedding
   pitch: Multi-modal geospatial embedding search and change detection on a frozen Clay v1.5 ViT — embed once, query cheaply.
-  status: Production
-  status_class: production
+  status: Released
+  status_class: released
   tags: [Python, PyTorch, ECSS, ML, EO]
   repo: https://github.com/AstroCan17/eo-data-embedding
   docs: https://astrocan17.github.io/eo-data-embedding/
@@ -10,10 +10,10 @@
   featured: true
 
 - slug: msi-processor
-  title: msi-processor
+  title: Sentinel-2 MSI Payload Data Ground Segment Processor
   pitch: Generic pushbroom MSI ground-segment processor — L0 to L2 on EOPF CPM with eight processing units, ECSS Cat-C lifecycle.
-  status: CI-green
-  status_class: ci-green
+  status: Completed
+  status_class: completed
   tags: [Python, EOPF, GDAL, ECSS, MSI]
   repo: https://github.com/AstroCan17/msi-processor
   docs: null
@@ -21,20 +21,20 @@
   featured: true
 
 - slug: s2-msi-raw-generator
-  title: s2-msi-raw-generator
-  pitch: Sentinel-2 MSI L1B to L0 reverse radiometric ladder — reconstructs raw DN and validates against Reference S2 L0 to within ~4 DN.
-  status: Production
-  status_class: production
+  title: Sentinel-2 MSI Synthetic Raw Data Generator
+  pitch: L1B to L0 reverse radiometric ladder — reconstructs raw DN and validates against Reference S2 L0 to within ~4 DN.
+  status: Deployed
+  status_class: deployed
   tags: [Python, Sentinel-2, CCSDS-122, ECSS, Cal/Val]
   repo: https://github.com/AstroCan17/s2-msi-raw-generator
   docs: https://astrocan17.github.io/s2-msi-raw-generator/
-  image: null
+  image: assets/projects/reverse_l1b_allbands.png
   featured: true
 
 - slug: sar-processor
   title: sar-processor
   pitch: Sensor-agnostic spaceborne SAR forward processor — L0 SAR packets to L1 SLC and L1 GRD on EOPF, Sentinel-1 reference profile.
-  status: Skeleton
+  status: Skeleton (pre-SRR)
   status_class: skeleton
   tags: [Python, EOPF, SAR, ECSS, Sentinel-1]
   repo: https://github.com/AstroCan17/sar-processor

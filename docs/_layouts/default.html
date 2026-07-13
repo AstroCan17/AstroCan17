@@ -3,58 +3,334 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
   <style>
     :root {
       color-scheme: dark;
+      --bg: #0d1117;
+      --bg-elevated: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --link: #58a6ff;
+      --link-visited: #a371f7;
+      --accent: #238636;
+      --accent-warn: #9e6a03;
+      --max-width: 960px;
     }
+    * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      background: #0d1117;
-      color: #e6edf3;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
     }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 17, 23, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .site-brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .site-brand:hover { color: var(--link); }
+    .site-nav {
+      display: flex;
+      gap: 0.25rem 1.25rem;
+      flex-wrap: wrap;
+    }
+    .site-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .site-nav a:hover { color: var(--text); }
+    .site-nav a.active {
+      color: var(--text);
+      border-bottom-color: var(--link);
+    }
+    .site-main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .site-footer a { color: var(--link); }
     p, li, blockquote, td {
       text-align: justify;
       text-justify: inter-word;
     }
-    h1, h2, h3, h4, h5, h6, summary, th {
-      text-align: left;
-    }
+    h1, h2, h3, h4, h5, h6, summary, th { text-align: left; }
+    h1 { font-size: 1.85rem; margin-top: 0; }
+    h2 { margin-top: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
     img { max-width: 100%; height: auto; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #30363d; padding: 0.5rem 0.75rem; }
-    th { background: #161b22; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; }
+    th { background: var(--bg-elevated); }
     details {
       margin: 1rem 0;
       padding: 0.5rem 1rem;
-      border: 1px solid #30363d;
+      border: 1px solid var(--border);
       border-radius: 6px;
-      background: #161b22;
+      background: var(--bg-elevated);
     }
-    summary { cursor: pointer; font-weight: 600; color: #e6edf3; }
+    summary { cursor: pointer; font-weight: 600; color: var(--text); }
     blockquote {
-      border-left: 4px solid #30363d;
+      border-left: 4px solid var(--border);
       margin-left: 0;
       padding-left: 1rem;
-      color: #8b949e;
+      color: var(--text-muted);
     }
-    a { color: #58a6ff; }
-    a:visited { color: #a371f7; }
-    hr { border: 0; border-top: 1px solid #30363d; margin: 2rem 0; }
+    a { color: var(--link); }
+    a:visited { color: var(--link-visited); }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
     code {
-      background: #161b22;
-      border: 1px solid #30363d;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 0.1em 0.35em;
       font-size: 0.9em;
     }
+    .hero {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin: 0.5rem 0 1rem;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 1.25rem 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--text);
+    }
+    .btn:hover { border-color: var(--link); color: var(--link); }
+    .btn-primary {
+      background: #1f6feb;
+      border-color: #1f6feb;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #388bfd; color: #fff; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0; }
+    .badge-row img { height: 28px; width: auto; }
+    .mission-patches {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+    .mission-patches img { width: 150px; border-radius: 6px; }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-elevated);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.15s;
+    }
+    .project-card:hover { border-color: #484f58; }
+    .project-card-image {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .project-card-body { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
+    .project-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+    .project-card h3 a { color: var(--text); text-decoration: none; }
+    .project-card h3 a:hover { color: var(--link); }
+    .project-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      flex: 1;
+    }
+    .status-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+    .status-production { background: #238636; color: #fff; }
+    .status-ci-green { background: #1f6feb; color: #fff; }
+    .status-skeleton { background: #6e7681; color: #fff; }
+    .status-ecosystem { background: #8957e5; color: #fff; }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin: 0.5rem 0;
+    }
+    .tag {
+      font-size: 0.72rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+    .timeline { margin: 2rem 0; }
+    .timeline-item {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 2px solid var(--border);
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--link);
+    }
+    .timeline-period {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .timeline-role { font-weight: 600; margin: 0; }
+    .timeline-org { color: var(--text-muted); margin: 0.15rem 0 0.5rem; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .skill-block {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-elevated);
+    }
+    .skill-block strong { display: block; margin-bottom: 0.35rem; }
+    .skill-block span { font-size: 0.9rem; color: var(--text-muted); }
+    .case-study-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .figure-pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .figure-pair img { max-width: 48%; min-width: 200px; border-radius: 6px; border: 1px solid var(--border); }
+    .mermaid { margin: 1.5rem 0; text-align: center; }
+    @media (max-width: 600px) {
+      .site-main { padding: 1.25rem 1rem 2rem; }
+      .figure-pair img { max-width: 100%; }
+    }
   </style>
+  {% if page.math %}
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
 </head>
 <body>
-  {{ content }}
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="{{ site.baseurl }}/">AstroCan17</a>
+      <nav class="site-nav" aria-label="Main">
+        {% assign home_url = site.baseurl | append: '/' %}
+        {% assign exp_url = site.baseurl | append: '/experience.html' %}
+        {% assign proj_url = site.baseurl | append: '/projects/' %}
+        <a href="{{ home_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>Home</a>
+        <a href="{{ exp_url }}"{% if page.url contains 'experience' %} class="active"{% endif %}>Experience</a>
+        <a href="{{ proj_url }}"{% if page.url contains '/projects' %} class="active"{% endif %}>Projects</a>
+        <a href="{{ home_url }}#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="site-main">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <p>
+      <a href="https://github.com/AstroCan17">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/candenizkaya/">LinkedIn</a> ·
+      <a href="mailto:candenizkaya17@gmail.com">Email</a> · Berlin
+    </p>
+    <p>Built with Jekyll on GitHub Pages · Apache-2.0 portfolio content</p>
+  </footer>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
+  </script>
 </body>
 </html>

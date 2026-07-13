@@ -1,9 +1,8 @@
 # Would you like to see my blood, sweat, and tears so far? :muscle: Go ahead, Houston … :satellite: :satellite:
 
-> **Satellite Image Processing & Cal/Val Engineer · Remote Sensing Engineer** — 11 satellite
-> missions across design, manufacturing, test, launch, on-orbit calibration/validation, and
-> ground-segment software. Pushbroom multispectral & hyperspectral (SWIR) optical instruments,
-> L0→L2 processing, and Earth-observation ML.
+> **Satellite Ground Segment Architect — Payload Data Processing** — 14 satellite missions across
+> Phase 0–E. ESA Harmony / EOF-EOS experience, L0→L2 processing chains, pushbroom multispectral &
+> hyperspectral Cal/Val, and Earth-observation ML.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
@@ -21,9 +20,9 @@
 ![USGS](https://img.shields.io/badge/USGS-Landsat%207%2F8%2F9-006633?style=for-the-badge)
 ![NASA](https://img.shields.io/badge/NASA-ASTER%20·%20MRO-0B3D91?style=for-the-badge)
 
-**Find me:** [LinkedIn](<!-- TODO: LinkedIn URL -->) · [Email](mailto:candenizkaya17@gmail.com) · Berlin
+**Find me:** [LinkedIn](https://www.linkedin.com/in/candenizkaya/) · [Email](mailto:candenizkaya17@gmail.com) · Berlin
 
-:globe_with_meridians: **Full profile:** [astrocan17.github.io/AstroCan17](https://astrocan17.github.io/AstroCan17/) — deep dives, Cal/Val detail, and more
+:globe_with_meridians: **Full portfolio:** [astrocan17.github.io/AstroCan17](https://astrocan17.github.io/AstroCan17/) — [projects](https://astrocan17.github.io/AstroCan17/projects/), [experience & Cal/Val depth](https://astrocan17.github.io/AstroCan17/experience.html)
 
 > :red_circle: **Note:** This profile is prepared using publicly available information from the
 > literature and reflects concepts I have learned during my professional experience. It does **not**
@@ -46,25 +45,31 @@
 
 [![CI](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/ci.yml/badge.svg)](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/ci.yml)
 [![docs](https://github.com/AstroCan17/eo-data-embedding/actions/workflows/docs.yml/badge.svg)](https://astrocan17.github.io/eo-data-embedding/)
-[![license](https://img.shields.io/badge/license-Apache--2.0-green)](https://github.com/AstroCan17/eo-data-embedding/blob/main/LICENSE)
 [![ECSS](https://img.shields.io/badge/ECSS--E--ST--40C-tailored-5b2c8f)](https://github.com/AstroCan17/eo-data-embedding/tree/main/compliance)
 
-Embed Sentinel-1/2 imagery **once** with a frozen **Clay v1.5** Vision Transformer, then run every
-downstream task cheaply over the stored vectors — **similarity search**, **few-shot classification**
-and **bitemporal change detection** — with no per-task fine-tuning and no GPU at query time. Ships a
-plug-and-play **CPU-only demo** (`eo-data-embedding demo`).
+Embed Sentinel-1/2 imagery **once** with a frozen **Clay v1.5** ViT; similarity search, few-shot classification, and change detection over stored vectors — CPU-only demo included.
 
-Developed following a **proportionate, tailored ECSS software-engineering lifecycle** for
-Earth-observation ML data-processing software (ECSS-E-ST-40C engineering + DRD set, ECSS-E-HB-40-02A
-ML V&V, ECSS-Q-ST-80C product assurance), with honest evaluation — negative results reported, not hidden.
+:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/eo-data-embedding.html) · :link: [Repository](https://github.com/AstroCan17/eo-data-embedding) · :books: [Docs](https://astrocan17.github.io/eo-data-embedding/)
 
-:link: [Repository](https://github.com/AstroCan17/eo-data-embedding) ·
-:books: [Documentation](https://astrocan17.github.io/eo-data-embedding/) ·
-:test_tube: [V&V report](https://github.com/AstroCan17/eo-data-embedding/blob/main/compliance/drd/vv-report.md)
+### [msi-processor](https://github.com/AstroCan17/msi-processor) — pushbroom MSI ground-segment L0→L2
 
-> :construction: **More to come** — additional EO processing repos (multispectral L0–L2,
-> georeferencing) are being reworked to the same ECSS-tailored lifecycle and consolidated under
-> [`eopf-data-processor`](https://github.com/AstroCan17/eopf-data-processor).
+Generic MSI processor on EOPF CPM — eight processing units (l0_decode → radiometric → enhancement → toa → coregister → georeference → atmospheric → pansharpen), ECSS Cat-C, CI-green.
+
+:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/msi-processor.html) · :link: [Repository](https://github.com/AstroCan17/msi-processor)
+
+### [s2-msi-raw-generator](https://github.com/AstroCan17/s2-msi-raw-generator) — Sentinel-2 L1B→L0 reverse ladder
+
+Runs real S2B L1B backwards through the operational radiometric chain; validates reconstructed L0 against real ESA L0 to **≤ ~4 DN** on 10/20 m bands.
+
+:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/s2-msi-raw-generator.html) · :link: [Repository](https://github.com/AstroCan17/s2-msi-raw-generator) · :books: [Docs](https://astrocan17.github.io/s2-msi-raw-generator/)
+
+### [sar-processor](https://github.com/AstroCan17/sar-processor) — spaceborne SAR L0→SLC→GRD
+
+Sensor-agnostic SAR forward processor on EOPF; Sentinel-1 C-SAR reference profile; ECSS skeleton (pre-SRR).
+
+:page_facing_up: [Case study](https://astrocan17.github.io/AstroCan17/projects/sar-processor.html) · :link: [Repository](https://github.com/AstroCan17/sar-processor)
+
+:link: [IPF ecosystem overview](https://astrocan17.github.io/AstroCan17/projects/ipf-ecosystem.html) — how generator, processor, and data-store connect.
 
 ---
 
@@ -78,15 +83,7 @@ ML V&V, ECSS-Q-ST-80C product assurance), with honest evaluation — negative re
 - **Products:** Sentinel-1 (SAR) · Sentinel-2 A/B · Sentinel-5P · Landsat 7/8/9 · ASTER · MRO CTX / HiRISE
 - **Domains:** AOCS · System Engineering · Optical Design · Optoelectronics · Mission Planning
 
-Comprehensive understanding of the entire data-processing and mission-planning lifecycle, from design
-to deployment — ensuring high-quality data products and efficient satellite operations.
-
----
-
-## :microscope: Deep dives
-
-Technical detail on ground-segment Cal/Val, L0–L2 pipelines, on-orbit NUC/MTF, and remote-sensing ML
-lives on the **[full profile site](https://astrocan17.github.io/AstroCan17/#microscope-deep-dives)**.
+:microscope: Cal/Val depth, on-orbit NUC/MTF, and L0–L2 pipeline detail on the **[Experience page](https://astrocan17.github.io/AstroCan17/experience.html)**.
 
 ---
 

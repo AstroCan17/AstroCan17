@@ -1,0 +1,54 @@
+- slug: eo-data-embedding
+  title: eo-data-embedding
+  pitch: Multi-modal geospatial embedding search and change detection on a frozen Clay v1.5 ViT — embed once, query cheaply.
+  status: Production
+  status_class: production
+  tags: [Python, PyTorch, ECSS, ML, EO]
+  repo: https://github.com/AstroCan17/eo-data-embedding
+  docs: https://astrocan17.github.io/eo-data-embedding/
+  image: assets/projects/demo_search.png
+  featured: true
+
+- slug: msi-processor
+  title: msi-processor
+  pitch: Generic pushbroom MSI ground-segment processor — L0 to L2 on EOPF CPM with eight processing units, ECSS Cat-C lifecycle.
+  status: CI-green
+  status_class: ci-green
+  tags: [Python, EOPF, GDAL, ECSS, MSI]
+  repo: https://github.com/AstroCan17/msi-processor
+  docs: null
+  image: assets/projects/l1b_rgb.png
+  featured: true
+
+- slug: s2-msi-raw-generator
+  title: s2-msi-raw-generator
+  pitch: Sentinel-2 MSI L1B to L0 reverse radiometric ladder — reconstructs raw DN and validates against real ESA L0 to within ~4 DN.
+  status: Production
+  status_class: production
+  tags: [Python, Sentinel-2, CCSDS-122, ECSS, Cal/Val]
+  repo: https://github.com/AstroCan17/s2-msi-raw-generator
+  docs: https://astrocan17.github.io/s2-msi-raw-generator/
+  image: null
+  featured: true
+
+- slug: sar-processor
+  title: sar-processor
+  pitch: Sensor-agnostic spaceborne SAR forward processor — L0 SAR packets to L1 SLC and L1 GRD on EOPF, Sentinel-1 reference profile.
+  status: Skeleton
+  status_class: skeleton
+  tags: [Python, EOPF, SAR, ECSS, Sentinel-1]
+  repo: https://github.com/AstroCan17/sar-processor
+  docs: null
+  image: null
+  featured: true
+
+- slug: ipf-ecosystem
+  title: IPF Ecosystem
+  pitch: Producer–consumer architecture tying the synthetic raw generator, MSI processor, and shared data-store into one validated IPF prototype.
+  status: Ecosystem
+  status_class: ecosystem
+  tags: [Architecture, EOPF, Data-store, Integration]
+  repo: https://github.com/AstroCan17/msi-processor
+  docs: null
+  image: null
+  featured: true

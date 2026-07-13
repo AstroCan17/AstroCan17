@@ -12,6 +12,8 @@ description: Sentinel-2 MSI L1B to L0 reverse radiometric ladder with Reference 
   <span><strong>Reference:</strong> Sentinel-2 L1 ATBD (public)</span>
 </div>
 
+![Generated Synthetic Raw Data]({{ site.baseurl }}assets/projects/reverse_l1b_allbands.png)
+
 ## Overview
 
 **s2-msi-raw-generator** runs a ReferenceSentinel-2B L1B backwards through the **exact inverse of the operational L0→L1B radiometric chain** to reconstruct the full EOPF product ladder — **L1A → L0plus (CCSDS-122 ISP) → L0** (focal-plane DN `img`, 12 detectors × 13 bands). The reconstructed L0 is validated directly against the **Reference S2 L0 `img`**, agreeing to **≤ ~4 DN on the ten 10 m + 20 m bands**.

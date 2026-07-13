@@ -31,6 +31,7 @@
 ### Mission Patches
 
 <div align="center">
+    <img src="mission_patches/Harmony_patch_pillars.png" width="170" alt="ESA Harmony">
     <img src="mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" width="170" alt="Connecta T1.1">
     <img src="mission_patches/Connecta%20T1.2%20Mission%20Patch.jpg" width="170" alt="Connecta T1.2">
     <img src="mission_patches/Connecta%20T2.1%20Mission%20Patch.jpg" width="170" alt="Connecta T2.1">

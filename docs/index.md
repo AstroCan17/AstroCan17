@@ -45,6 +45,7 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
 <h2 class="section-heading">Mission Patches</h2>
 
 <div class="mission-patches">
+  <img src="{{ site.baseurl }}/mission_patches/Harmony_patch_pillars.png" alt="ESA Harmony">
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T1.1%20Mission%20Patch.jpg" alt="Connecta T1.1">
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T1.2%20Mission%20Patch.jpg" alt="Connecta T1.2">
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T2.1%20Mission%20Patch.jpg" alt="Connecta T2.1">

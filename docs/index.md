@@ -2,12 +2,7 @@
 layout: default
 title: Home
 description: Satellite Ground Segment Architect — Payload Data Processing — portfolio and projects.
-pipeline: true
 ---
-
-{% include pipeline-hero.html %}
-
-<div class="home-content-wrap">
 
 <div class="hero">
 
@@ -109,5 +104,3 @@ pipeline: true
 <p class="section-lead">I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog — feel free to get in touch! 😎</p>
 
 <p class="contact-line"><strong>Find me:</strong> <a href="https://www.linkedin.com/in/candenizkaya/">LinkedIn</a> · <a href="mailto:candenizkaya17@gmail.com">Email</a> · <a href="https://github.com/AstroCan17">GitHub</a> · Berlin</p>
-
-</div>

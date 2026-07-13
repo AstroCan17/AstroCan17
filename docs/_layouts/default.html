@@ -322,7 +322,16 @@
       margin: 1.5rem 0;
     }
     .figure-pair img { max-width: 48%; min-width: 200px; border-radius: 6px; border: 1px solid var(--border); }
-    .mermaid { margin: 1.5rem 0; text-align: center; }
+    .mermaid {
+      margin: 1.5rem 0;
+      text-align: center;
+      overflow-x: auto;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    pre.mermaid { white-space: pre-wrap; }
     @media (max-width: 600px) {
       .site-main { padding: 1.25rem 1rem 2rem; }
       .figure-pair img { max-width: 100%; }
@@ -365,7 +374,23 @@
   </footer>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      securityLevel: 'loose',
+      flowchart: { useMaxWidth: true, htmlLabels: true }
+    });
+
+    document.querySelectorAll('code.language-mermaid').forEach((code) => {
+      const diagram = document.createElement('pre');
+      diagram.className = 'mermaid';
+      diagram.textContent = code.textContent;
+      const wrapper = code.closest('pre') || code.parentElement;
+      wrapper?.replaceWith(diagram);
+    });
+
+    await mermaid.run({ querySelector: '.mermaid' });
   </script>
 </body>
 </html>

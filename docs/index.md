@@ -2,21 +2,26 @@
 layout: default
 title: Home
 description: Satellite Ground Segment Architect — Payload Data Processing — portfolio and projects.
+pipeline: true
 ---
+
+{% include pipeline-hero.html %}
+
+<div class="home-content-wrap">
 
 <div class="hero">
 
 <h1 class="hero-title">Would you like to see my blood, sweat, and tears so far? 💪 Go ahead, Houston … 🛰️ 🛰️</h1>
 
 <p class="hero-tagline">
-  <strong>Satellite Ground Segment Architect — Payload Data Processing</strong> — 14 satellite
+  <strong>Satellite Ground Segment Architect — Payload Data Processing</strong> — {% include mission-count.html %} satellite
   missions across Phase 0–E. ESA Harmony / EOF-EOS experience, L0→L2 processing chains,
   pushbroom multispectral &amp; hyperspectral Cal/Val, and Earth-observation ML.
 </p>
 
 <div class="hero-cta">
   <a class="btn btn-primary" href="{{ site.baseurl }}/projects/">View projects</a>
-  <a class="btn" href="{{ site.baseurl }}/experience.html">Experience &amp; Cal/Val depth</a>
+  <a class="btn" href="{{ site.baseurl }}/experience.html">Experience &amp; competency depth</a>
 </div>
 
 <div class="badge-row">
@@ -52,13 +57,23 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
   <img src="{{ site.baseurl }}/mission_patches/Connecta%20T3.1%20%26%20T3.2%20ISL%20Twin%20Cubesats%20Mission%20Patch.jpg" alt="Connecta T3.1 & T3.2">
 </div>
 
+<p class="section-lead"><a href="{{ site.baseurl }}/experience.html#mission-registry">{% include mission-count.html %} missions</a> across Phase 0–E — see the full registry on the Experience page.</p>
+
+---
+
+<h2 class="section-heading">Core competencies</h2>
+
+<p class="section-lead">Four pillars of my satellite ground-segment and Earth-observation practice — full depth on the <a href="{{ site.baseurl }}/experience.html"><strong>Experience</strong></a> page.</p>
+
+{% include competency-nav.html %}
+
 ---
 
 <h2 class="section-heading">Projects</h2>
 
 <p class="section-lead">Open-source Earth-observation software — MSI/SAR ground-segment processors, synthetic raw generation, and ML embeddings. All developed under a tailored <strong>ECSS-E-ST-40C</strong> lifecycle.</p>
 
-{% include project-cards.html %}
+{% include project-cards-grouped.html %}
 
 <p class="section-link"><a href="{{ site.baseurl }}/projects/">View all projects →</a></p>
 
@@ -85,7 +100,7 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
   </div>
 </div>
 
-<p class="section-lead">Full skills list and technical Cal/Val depth on the <a href="{{ site.baseurl }}/experience.html"><strong>Experience</strong></a> page.</p>
+<p class="section-lead">Full skills list on the <a href="{{ site.baseurl }}/experience.html"><strong>Experience</strong></a> page.</p>
 
 ---
 
@@ -94,3 +109,5 @@ description: Satellite Ground Segment Architect — Payload Data Processing — 
 <p class="section-lead">I just moved to Berlin and I'm practically glued to my computer chair. If anyone's bored and wants to grab a coffee or beer to chat about satellites, space, rock music, Elon Musk's wife, astrophysics, parallel universes, or Laika the dog — feel free to get in touch! 😎</p>
 
 <p class="contact-line"><strong>Find me:</strong> <a href="https://www.linkedin.com/in/candenizkaya/">LinkedIn</a> · <a href="mailto:candenizkaya17@gmail.com">Email</a> · <a href="https://github.com/AstroCan17">GitHub</a> · Berlin</p>
+
+</div>

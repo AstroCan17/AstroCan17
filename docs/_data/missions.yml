@@ -1,0 +1,50 @@
+- name: CONNECTA T1.1
+  org: Plan-S Satellite and Space
+  phase: "D–E"
+  public: true
+
+- name: CONNECTA T1.2
+  org: Plan-S Satellite and Space
+  phase: "D–E"
+  public: true
+
+- name: CONNECTA T2.1
+  org: Plan-S Satellite and Space
+  phase: "D–E"
+  public: true
+
+- name: CONNECTA T3.1
+  org: Plan-S Satellite and Space
+  phase: "C–D"
+  public: true
+
+- name: CONNECTA T3.2
+  org: Plan-S Satellite and Space
+  phase: "C–D"
+  public: true
+
+- name: Additional CubeSat missions
+  org: Plan-S Satellite and Space
+  phase: "C–E"
+  public: false
+  count: 7
+
+- name: ESA Harmony
+  org: ESA / Starion
+  phase: "0–D"
+  public: true
+
+- name: GHG monitoring mission
+  org: AIRMO GmbH
+  phase: "C–D"
+  public: false
+
+- name: Hyperspectral spectrometer
+  org: Freelance
+  phase: "B–C"
+  public: false
+
+- name: VHR nanosatellite PDGS
+  org: Freelance
+  phase: "C–D"
+  public: false

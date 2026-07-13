@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Experience
-description: Satellite ground segment, payload data processing, Cal/Val, and Earth-observation ML experience across 14 satellite missions.
+description: Satellite ground segment, payload data processing, Cal/Val, and Earth-observation ML experience across 16 satellite missions.
 math: true
 ---
 
 # Experience
 
-> **Satellite Ground Segment Architect — Payload Data Processing — AI Data Processing** — 14 satellite
+> **Satellite Ground Segment Architect — Payload Data Processing — AI Data Processing** — {% include mission-count.html %} satellite
 > missions across Phase 0–E, combining system engineering with hands-on L0–L2 payload data processing,
 > laboratory and on-orbit Cal/Val, and ECSS-compliant software delivery.
 
@@ -18,7 +18,7 @@ math: true
 ## Professional summary
 
 Operational satellite ground segment system engineer with **ESA Harmony / EOF-EOS (PDGS)** experience
-in ECSS-compliant environments. Contributed across **14 satellite missions** covering the full
+in ECSS-compliant environments. Contributed across **{% include mission-count.html %} satellite missions** covering the full
 Phase 0–E lifecycle — requirements decomposition (URD/MRD/SRD), MBSE-based architecture (UML/SysML),
 interface control, and IV&V. Designed and developed **L0–L2 payload data processing chains** with
 system-level sizing and trade-offs (throughput, latency, compute capacity), and implemented
@@ -35,7 +35,7 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-period">February 2026 – Present · Remote / Berlin</div>
+    <div class="timeline-period">February 2026 – June 2026 · Remote / Berlin</div>
     <p class="timeline-role">Ground Segment System &amp; AI Data Processing Lead Engineer</p>
     <p class="timeline-org">Cosmic DynamiX</p>
     <ul>
@@ -43,7 +43,6 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
       <li>Developed satellite ground segment data processor pipeline (L0–L2) and AI/ML pipeline for CNNs and Spiking Neural Networks (SNNs).</li>
       <li>Integrated CNNs and SNNs into YOLO framework for EO data processing — end-to-end AI-based chain for small ground-target detection on HR imagery.</li>
       <li>Led technical planning: data volumes, throughput, latency, GPU/memory trade-offs; defined QA/QC and traceability for AI outputs.</li>
-      <li>Open-source portfolio: <a href="{{ site.baseurl }}/projects/s2-msi-raw-generator.html">Sentinel-2 MSI Synthetic Raw Data Generator</a>, <a href="{{ site.baseurl }}/projects/msi-processor.html">msi-processor</a>, <a href="{{ site.baseurl }}/projects/sar-processor.html">sar-processor</a>, <a href="{{ site.baseurl }}/projects/eo-data-embedding.html">eo-data-embedding</a> (<a href="{{ site.baseurl }}/projects/ipf-ecosystem.html">IPF ecosystem</a>).</li>
     </ul>
   </div>
   <div class="timeline-item">
@@ -84,7 +83,7 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
     <p class="timeline-org">Plan-S Satellite and Space</p>
     <ul>
       <li>Designed end-to-end containerized L0–L2 ground segment pipeline with GPU-accelerated band processing, automated QA/QC, metadata generation, and full product lineage tracking.</li>
-      <li>Ground segment support across <strong>12 CubeSat missions</strong> — lab calibration, on-orbit commissioning, routine performance monitoring.</li>
+      <li>Ground segment support across <strong>12 CubeSat missions</strong> — lab calibration, on-orbit commissioning, routine performance monitoring (<a href="#mission-registry">mission registry</a>).</li>
       <li><strong>CONNECTA T2.1</strong> (3.25 m GSD): full multispectral CubeSat lifecycle; L0–L2 processor (NUC, MTF, denoising, georeferencing, atmospheric correction).</li>
       <li><strong>CONNECTA T3.1 &amp; T3.2:</strong> lab Cal/Val of COTS SWIR camera for twin ISL CubeSats.</li>
       <li>Built operator-facing Qt GUI and CLI/API; Docker-containerized execution, versioned YAML/JSON config, automated PDF Data Quality Reports.</li>
@@ -113,18 +112,34 @@ building the **exact inverse of the Sentinel-2 MSI L0→L1B chain** in the open-
 
 ---
 
-## Technical depth
+## Competency depth
 
-The sections below expand on hands-on Cal/Val and processing work referenced in the timeline above.
+The sections below expand on four core competency areas referenced in the timeline above.
 
-### Ground-segment Cal/Val — Pushbroom hyperspectral spectrometer (L0–L1b)
+{% include competency-nav.html local=true %}
 
-I perform laboratory calibration of optical hyperspectral spectrometers for spaceborne applications.
-Following Baumgartner's calibration framework and utilizing DLR's Optical Calibration Laboratory
-facilities, I ensure the instrument meets its spectral, radiometric, and geometric fidelity
-requirements. The campaign systematically characterizes detector-related effects, spectral response,
-radiometric accuracy, and geometric alignment, validating that the instrument will perform to mission
-specification on orbit.
+<h3 id="system-engineering" class="competency-section">System Engineering</h3>
+
+Ground-segment and payload-data system engineering across Phase 0–E in ECSS-compliant environments.
+
+- **Requirements & architecture** — URD/MRD/SRD decomposition; MBSE-based design (UML/SysML); interface control documents and Master ICD maintenance.
+- **Review & IV&V** — Ground Segment Review Board (ESA Harmony); HEEPS simulator reviews; cross-verification testing for SAR and multispectral processors (L1/L2/L3); change control and traceability.
+- **Sizing & trade-offs** — downlink volumes, throughput, latency, compute capacity; C++ vs Python processor implementation trade-offs; GPU/memory planning for AI pipelines.
+- **Standards & transition** — CCSDS, PUS; EOPF transition (Zarr adoption, Sentinel-1 ingestion); PDR/CDR/QR lifecycle participation.
+- **Container orchestration** — Docker and Kubernetes for ground-segment deployment patterns.
+
+Related open-source work: [IPF ecosystem]({{ site.baseurl }}/projects/ipf-ecosystem.html) · [sar-processor]({{ site.baseurl }}/projects/sar-processor.html)
+
+<h3 id="cal-val" class="competency-section">Cal/Val</h3>
+
+Laboratory and on-orbit calibration for pushbroom optical instruments — hyperspectral, multispectral, and SWIR.
+
+#### Ground-segment Cal/Val — Pushbroom hyperspectral spectrometer (L0–L1b)
+
+I perform laboratory calibration of optical hyperspectral spectrometers for spaceborne applications,
+ensuring the instrument meets its spectral, radiometric, and geometric fidelity requirements. The
+campaign systematically characterizes detector-related effects, spectral response, radiometric accuracy,
+and geometric alignment, validating that the instrument will perform to mission specification on orbit.
 
 **Calibration objectives**
 
@@ -160,29 +175,7 @@ linearity) and geometric (distortion maps, smile/keystone) calibration files; un
 against reference standards and environmental stability; validation by applying calibration files to a
 test dataset and verifying requirement compliance.
 
-### Multispectral high-resolution camera — preprocessing pipeline (L0–L2)
-
-Responsible for developing the calibration, validation and preprocessing **ground-segment software**
-from **Level-0 (raw)** to **Level-2 (science-ready)** for pushbroom multispectral optical instruments.
-
-- **Level 0** — decoding; missing-package check and flag generation.
-- **Level 1** — Non-Uniformity Correction (gain/offset key data); dark-current correction; denoising
-  (filters / designed digital signal filters); radiometric conversion from lab or on-orbit key data;
-  MTF compensation / PSF deconvolution; band co-registration (sensor acquisition model or keypoint
-  extraction & matching); georeferencing (GDAL/rasterio; central-pixel metadata coordinate, or — when
-  GNSS is missing — Sentinel-2 reference via TLE + Google Earth Engine, then image-to-image keypoint
-  matching); geolocation-accuracy (CE95); orthorectification.
-- **Level 2** — atmospheric correction (Py6S).
-- **Additional** — pansharpening (Simple Brovey, Gram-Schmidt, ESRI); image-quality report (PSNR, RMSE,
-  SSIM, MSE, GIQE, CE95, radiometric accuracy) generated to PDF.
-
-| Requirements | Testing & development framework |
-|-------------|-----------------------------------|
-| Python 3.x, NumPy, OpenCV, GDAL, rasterio, scikit-image, matplotlib, Earth Engine API | Docker · Kubernetes · Dask (distributed) · Pytest · unit-test coverage · comprehensive logging |
-
-This experience directly informs the open-source [msi-processor]({{ site.baseurl }}/projects/msi-processor.html) project.
-
-### On-orbit radiometric, spatial & geometric calibration — NUC / MTF / TOA
+#### On-orbit radiometric, spatial & geometric calibration — NUC / MTF / TOA
 
 I command captures of pseudo-invariant sites (Mauritania Desert, Dome-C, Antarctic) for flatfield
 images at different TDI stages and exposure times (following the USGS Test Sites Catalog), and night
@@ -224,21 +217,63 @@ OLI; due to MODTRAN licensing, follow the Landsat 8–9 Cal/Val ADD (p. 776). **
 SNR** — optics+sensor integrated modeling to compute total photons collected as a function of attitude
 (roll, pitch, yaw).
 
-### Remote-sensing applications & deep learning
+Mission examples: CONNECTA T2.1/T3.x CubeSats · GHG monitoring mission (AIRMO) · hyperspectral spectrometer Cal/Val matrix (QA4EO-aligned).
+
+<h3 id="remote-sensing-ai" class="competency-section">Remote Sensing &amp; AI/ML</h3>
+
+Earth-observation science and machine-learning pipelines across operational and research missions.
 
 - **ESA / USGS / NASA products:** Sentinel-1 (SAR), Sentinel-2 A/B, Sentinel-5P, Landsat 7/8/9, ASTER,
   MRO CTX & HiRISE.
 - **Applications:** metallic-mineral exploration · fault-line detection · natural-disaster analysis ·
   NDVI/NDWI/NBR · image segmentation · surface-deformation detection · lineament extraction.
-- **ATBD depth:** Sentinel-5P TROPOMI ATBD and Sentinel-2 ATBD.
 - **Tooling (Qt Designer):** image-processing pipeline tools; image database search & download utilities.
 - **ASTER:** VNIR/SWIR/TIR channels for mineral & mineral-group identification (mining applications).
-- **Deep learning (Python, OpenCV, Keras):** object detection via color segmentation, template matching,
-  corner/edge/contour detection; feature matching; watershed; pedestrian and face/cat-face recognition;
-  CNNs for real-time digit classification and object detection; pyramid representation, sliding window,
-  non-maximum suppression, region proposals; R-CNN, YOLO and SSD.
+- **Deep learning (Python, OpenCV, Keras, PyTorch):** object detection via color segmentation, template matching,
+  corner/edge/contour detection; feature matching; watershed; CNNs for real-time digit classification and object detection;
+  pyramid representation, sliding window, non-maximum suppression, region proposals; R-CNN, YOLO and SSD;
+  Spiking Neural Networks (SNNs) integrated into EO target-detection chains.
+- **Research:** Turkish Lunar Rover Mission — DEM extraction and ML prototypes for landing-site analysis;
+  planetary geology (Thaumasia Planum, Mars); BSc thesis lineament extraction (Landsat-8 PCA).
 
-This experience informs the [eo-data-embedding]({{ site.baseurl }}/projects/eo-data-embedding.html) project and broader EO ML work.
+Related open-source work: [eo-data-embedding]({{ site.baseurl }}/projects/eo-data-embedding.html)
+
+<h3 id="software-data-processing" class="competency-section">Software Data Processing Development</h3>
+
+End-to-end payload data ground-segment software from raw instrument packets to science-ready products.
+
+#### Multispectral high-resolution camera — preprocessing pipeline (L0–L2)
+
+Responsible for developing the calibration, validation and preprocessing **ground-segment software**
+from **Level-0 (raw)** to **Level-2 (science-ready)** for pushbroom multispectral optical instruments.
+
+- **Level 0** — decoding; missing-package check and flag generation.
+- **Level 1** — Non-Uniformity Correction (gain/offset key data); dark-current correction; denoising
+  (filters / designed digital signal filters); radiometric conversion from lab or on-orbit key data;
+  MTF compensation / PSF deconvolution; band co-registration (sensor acquisition model or keypoint
+  extraction & matching); georeferencing (GDAL/rasterio; central-pixel metadata coordinate, or — when
+  GNSS is missing — Sentinel-2 reference via TLE + Google Earth Engine, then image-to-image keypoint
+  matching); geolocation-accuracy (CE95); orthorectification.
+- **Level 2** — atmospheric correction (Py6S).
+- **Additional** — pansharpening (Simple Brovey, Gram-Schmidt, ESRI); image-quality report (PSNR, RMSE,
+  SSIM, MSE, GIQE, CE95, radiometric accuracy) generated to PDF.
+
+| Requirements | Testing & development framework |
+|-------------|-----------------------------------|
+| Python 3.x, NumPy, OpenCV, GDAL, rasterio, scikit-image, matplotlib, Earth Engine API | Docker · Kubernetes · Dask (distributed) · Pytest · unit-test coverage · comprehensive logging |
+
+Operator-facing **Qt GUI and CLI/API**; Docker-containerized execution; versioned YAML/JSON configuration;
+automated PDF Data Quality Reports.
+
+Related open-source work: [msi-processor]({{ site.baseurl }}/projects/msi-processor.html) · [Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html) · [IPF ecosystem]({{ site.baseurl }}/projects/ipf-ecosystem.html)
+
+---
+
+## Mission registry {#mission-registry}
+
+{% include mission-count.html %} satellite missions across Phase 0–E — public missions named below; confidential programmes listed without proprietary detail.
+
+{% include missions-grid.html %}
 
 ---
 

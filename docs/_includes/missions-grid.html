@@ -1,0 +1,17 @@
+<div class="mission-grid">
+{% for mission in site.data.missions %}
+  <article class="mission-card{% unless mission.public %} mission-card-confidential{% endunless %}">
+    <h4>
+      {% if mission.public %}
+        {{ mission.name }}{% if mission.count %} (×{{ mission.count }}){% endif %}
+      {% elsif mission.count %}
+        Additional CubeSat programme support (×{{ mission.count }})
+      {% else %}
+        Confidential EO mission
+      {% endif %}
+    </h4>
+    <p class="mission-org">{{ mission.org }}</p>
+    <span class="mission-phase">Phase {{ mission.phase }}</span>
+  </article>
+{% endfor %}
+</div>

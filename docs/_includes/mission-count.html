@@ -1,0 +1,9 @@
+{%- assign mission_count = 0 -%}
+{%- for m in site.data.missions -%}
+  {%- if m.count -%}
+    {%- assign mission_count = mission_count | plus: m.count -%}
+  {%- else -%}
+    {%- assign mission_count = mission_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{{- mission_count -}}

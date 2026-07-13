@@ -8,10 +8,6 @@ description: Earth-observation software portfolio — MSI/SAR processors, synthe
 
 Open-source Earth-observation software developed under a proportionate, tailored **ECSS-E-ST-40C** lifecycle. Each case study below distils the technical substance of the repository; full compliance documentation lives in the respective GitHub repos.
 
-{% include project-cards.html %}
+{% include project-cards-grouped.html %}
 
-## IPF prototype at a glance
-
-The **Instrument Processing Facility (IPF)** prototype connects a synthetic raw-data **producer** ([Sentinel-2 MSI Synthetic Raw Data Generator]({{ site.baseurl }}/projects/s2-msi-raw-generator.html)), a multispectral **consumer** (`msi-processor`), and a shared **data-store** registry. The generator runs **S2B L1B** backwards through the operational radiometric chain, materialises **Synthetic L0** products and a calibration database, and the processor consumes those inputs for a non-tautological L0→L1B round-trip.
-
-See the [IPF ecosystem case study]({{ site.baseurl }}/projects/ipf-ecosystem.html) for the full architecture.
+<p class="section-link">See the <a href="{{ site.baseurl }}/projects/ipf-ecosystem.html">IPF ecosystem case study</a> for the full producer–consumer architecture diagram.</p>

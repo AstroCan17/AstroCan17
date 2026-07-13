@@ -1,24 +1,14 @@
-- slug: eo-data-embedding
-  title: eo-data-embedding
-  pitch: Multi-modal geospatial embedding search and change detection on a frozen Clay v1.5 ViT — embed once, query cheaply.
-  status: Released
-  status_class: released
-  tags: [Python, PyTorch, ECSS, ML, EO]
-  repo: https://github.com/AstroCan17/eo-data-embedding
-  docs: https://astrocan17.github.io/eo-data-embedding/
-  image: assets/projects/demo_search.png
-  featured: true
-
-- slug: msi-processor
-  title: Sentinel-2 MSI Payload Data Ground Segment Processor
-  pitch: Generic pushbroom MSI ground-segment processor — L0 to L2 on EOPF CPM with eight processing units, ECSS Cat-C lifecycle.
-  status: Completed
-  status_class: completed
-  tags: [Python, EOPF, GDAL, ECSS, MSI]
+- slug: ipf-ecosystem
+  title: IPF Ecosystem
+  pitch: Producer–consumer architecture tying the synthetic raw generator, MSI processor, and shared data-store into one validated IPF prototype.
+  status: Ecosystem
+  status_class: ecosystem
+  tags: [Architecture, EOPF, Data-store, Integration]
   repo: https://github.com/AstroCan17/msi-processor
   docs: null
-  image: assets/projects/l1b_rgb.png
+  image: null
   featured: true
+  group: ipf
 
 - slug: s2-msi-raw-generator
   title: Sentinel-2 MSI Synthetic Raw Data Generator
@@ -30,6 +20,19 @@
   docs: https://astrocan17.github.io/s2-msi-raw-generator/
   image: assets/projects/reverse_l1b_allbands.png
   featured: true
+  group: processors
+
+- slug: msi-processor
+  title: Sentinel-2 MSI Payload Data Ground Segment Processor
+  pitch: Generic pushbroom MSI ground-segment processor — L0 to L2 on EOPF CPM with eight processing units, ECSS Cat-C lifecycle.
+  status: Completed
+  status_class: completed
+  tags: [Python, EOPF, GDAL, ECSS, MSI]
+  repo: https://github.com/AstroCan17/msi-processor
+  docs: null
+  image: assets/projects/l1b_rgb.png
+  featured: true
+  group: processors
 
 - slug: sar-processor
   title: sar-processor
@@ -41,14 +44,16 @@
   docs: https://astrocan17.github.io/sar-processor/
   image: null
   featured: true
+  group: processors
 
-- slug: ipf-ecosystem
-  title: IPF Ecosystem
-  pitch: Producer–consumer architecture tying the synthetic raw generator, MSI processor, and shared data-store into one validated IPF prototype.
-  status: Ecosystem
-  status_class: ecosystem
-  tags: [Architecture, EOPF, Data-store, Integration]
-  repo: https://github.com/AstroCan17/msi-processor
-  docs: null
-  image: null
+- slug: eo-data-embedding
+  title: eo-data-embedding
+  pitch: Multi-modal geospatial embedding search and change detection on a frozen Clay v1.5 ViT — embed once, query cheaply.
+  status: Released
+  status_class: released
+  tags: [Python, PyTorch, ECSS, ML, EO]
+  repo: https://github.com/AstroCan17/eo-data-embedding
+  docs: https://astrocan17.github.io/eo-data-embedding/
+  image: assets/projects/demo_search.png
   featured: true
+  group: ml

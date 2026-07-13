@@ -1,0 +1,9 @@
+.vscode/
+.claude/
+.remember/
+.vscode/settings.json
+
+# Never commit personal CV or PII-bearing files
+docs/assets/cv.pdf
+**/Can-Deniz-Kaya-CV.pdf
+**/Can_Deniz_Kaya_CV*.pdf
